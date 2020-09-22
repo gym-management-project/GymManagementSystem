@@ -8,7 +8,7 @@ const app =  express();
 app.set("view engine" , "ejs");
 app.use(bodyParser.urlencoded ({extended : true}));
 
-app.get("/",(req,res) => {
+app.get("/subscriptions",(req,res) => {
   res.render("index");
 });
 
