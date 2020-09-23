@@ -1,0 +1,65 @@
+* {
+  margin:0;
+  padding:0;
+}
+body {
+  background-image: url(img/wp2018823.jpg);
+  height: 1080px;
+  
+}
+header {
+  margin:20px;
+  background-color: #24292e;
+  border-radius: 30px;
+  height:55px;
+  width:85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+.logo {
+  padding-top: 5px;
+}
+
+.logo img {
+  height: 75px;
+}
+
+.Name {
+  color: red;
+  font-size: 35px;
+  margin-left: 10%;
+}
+
+.Name:hover {
+  color: blueviolet;
+}
+
+.nav li{
+  display: inline;
+  padding-right: 20px;
+}
+
+.nav li a {
+  color: rgb(255, 255, 255);
+}
+.nav li a:hover {
+  color: rgb(247, 25, 128);
+}
+
+
+footer {
+  float:bottom;
+}
+
+
+
+section {
+  height: 80%;
+  border: 2px solid black;
+}
