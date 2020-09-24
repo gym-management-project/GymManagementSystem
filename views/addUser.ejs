@@ -1,56 +1,56 @@
 <!-- 1) first name last name
-      2)phone Number
+     2) phone Number
      3) address
-       4)dob
-       5)sex
-     5)family member name
-     family member number
-   6)blood group
-   7) subscription
-    8)money paid
-   9)previous incidents
-  10) options(aerobics or fitness or yoga)
- 11)  -->
+     4) dob
+     5) sex
+     5) family member name/
+        family member number
+     6) blood group
+     7) subscription
+     8) money paid
+     9) previous incidents
+    10) options(aerobics or fitness or yoga)
+  -->
 
 
 
 <%- include("partials/headerManagement"); -%>
 <div class="form">
   <div class="form-container">
-    <form class="users-detail" action="/sucbsriptions" method="post" style="margin-bottom : 50px; padding-bottom:50px;">
+    <form class="users-detail" action="/addusers" method="post" style="margin-bottom : 50px; padding-bottom:50px;">
 
       <p class="detailsInfo">Personal details</p>
 
       <div class="form-row">
         <div class="col-auto">
           <label for="inline">First name</label>
-          <input type="text" name="fname" class="form-control" id="inline" placeholder="first name" required autocomplete="off">
+          <input type="text" name="fname" class="form-control" id="inline" placeholder="first name" required autocomplete="on">
         </div>
         <div class="col-auto colright">
           <label for="inline">Last name</label>
-          <input type="text" name="lname" class="form-control " id="inline" placeholder="last name" required autocomplete="off">
+          <input type="text" name="lname" class="form-control " id="inline" placeholder="last name" required autocomplete="on">
         </div>
       </div>
       <div class="form-row">
         <div class="col-auto">
           <label for="inline">Phone Number</label>
-          <input type="tel" name="Pnum1" class="form-control" placeholder="Phone number" id="inline" required autocomplete="off">
+          <input type="tel" name="Pnum1" class="form-control" placeholder="Phone number" id="inline" required autocomplete="on">
         </div>
         <div class="col-auto colright">
           <label for="inline">second Phone Number</label>
-          <input type="tel" name="Pnum2" class="form-control" placeholder="Phone number" id="inline" autocomplete="off">
+          <input type="tel" name="Pnum2" class="form-control" placeholder="Phone number" id="inline" autocomplete="on">
         </div>
       </div>
       <div class="form-row">
         <div class="col">
           <label for="inline">Address</label>
-          <input type="text" name="address" class="form-control" placeholder="Address" id="inline" required autocomplete="off">
+          <input type="text" name="address" class="form-control" placeholder="Address" id="inline" required autocomplete="on">
         </div>
       </div>
       <div class="form-row">
         <div class="col">
           <label for="inline">D.O.B</label>
-          <input type="date" name="dob" class="form-control" id="inline" required autocomplete="off">
+          <input type="date" name="dob" class="form-control" id="inline" required autocomplete="on">
         </div>
       </div>
       <div class="form-row">
@@ -68,22 +68,22 @@
       <div class="form-row">
         <div class="col">
           <label for="inline">email</label>
-          <input type="email" name="email" class="form-control" id="inline" placeholder="shray@xxx.com" required autocomplete="off">
+          <input type="email" name="email" class="form-control" id="inline" placeholder="shray@xxx.com" required autocomplete="on">
         </div>
       </div>
       <p class="detailsInfo">Family details</p>
       <div class="form-row">
         <div class="col-auto">
           <label for="inline">Family member name</label>
-          <input type="text" name="famName" class="form-control" placeholder="name" id="inline" required autocomplete="off">
+          <input type="text" name="famName" class="form-control" placeholder="name" id="inline" required autocomplete="on">
         </div>
         <div class="col-auto">
           <label for="inline">Relation</label>
-          <input type="text" name="relation" class="form-control" placeholder="relation" id="inline" required autocomplete="off">
+          <input type="text" name="relation" class="form-control" placeholder="relation" id="inline" required autocomplete="on">
         </div>
         <div class="col-auto colright">
           <label for="inline"> phone number</label>
-          <input type="tel" name="famPnum" class="form-control" placeholder="Phone number" id="inline" autocomplete="off">
+          <input type="tel" name="famPnum" class="form-control" placeholder="Phone number" id="inline" autocomplete="on">
         </div>
       </div>
       <p class="detailsInfo">Medical details</p>
@@ -93,7 +93,7 @@
           <label for="inline">
             Bone Injury
           </label>
-          <input type="text" name="boneInjury" placeholder="if then where" id="inline" class=" form-control" required autocomplete="off">
+          <input type="text" name="boneInjury" placeholder="if then where" id="inline" class=" form-control" required autocomplete="on">
         </div>
       </div>
       <div class="form-row">
@@ -102,39 +102,40 @@
           <textarea name="disease" class="form-control" id="inline" required placeholder="enter your disease information if you have any"></textarea>
         </div>
       </div>
-        <p class="detailsInfo">Subscriptions details</p>
-        <div class="form-row">
-          <div class="col">
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Package</label>
-              <select name="package" class="form-control" id="exampleFormControlSelect1" required>
-                <option>1 months</option>
-                <option>4 months</option>
-                <option>6 months</option>
-                <option>1 year</option>
-                <option>1.5 year</option>
-              </select>
-            </div>
+      <p class="detailsInfo">Subscriptions details</p>
+      <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Package</label>
+            <select name="package" class="form-control" id="exampleFormControlSelect1" required>
+              <option>1 months</option>
+              <option>4 months</option>
+              <option>6 months</option>
+              <option>1 year</option>
+              <option>1.5 year</option>
+            </select>
           </div>
         </div>
-        <div class="form-row">
-          <div class="col">
-            <label for="inline">Starting Date</label>
-            <input type="date" name="startDate" class="form-control" id="inline" required autocomplete="off">
-          </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inline">Starting Date</label>
+          <input type="date" name="startDate" class="form-control" id="inline" required autocomplete="on">
         </div>
-         <hr class="divider">
-         <div class="form-row">
+      </div>
+      <hr class="divider">
+      <div class="form-row">
 
 
-             <input id="terms" type="checkbox" name="terms" required>
-             <label id="term" for="terms">Terms and Conditions</label>
+        <input id="terms" type="checkbox" name="terms" required>
+        <label id="term" for="terms">Terms and Conditions</label>
 
 
-             <p class="conditions">By submitting this form you will enroll in this gym , Once you subscribe payment is non-refundable . Gym will not be liable to Any injury takesplace , Gym equipments are private property of Gold gym , if caught stealing or destroying will be responnsible for damages and punishment</p>
+        <p class="conditions">By submitting this form you will enroll in this gym , Once you subscribe payment is non-refundable . Gym will not be liable to Any injury takesplace , Gym equipments are private property of Gold gym , if caught stealing
+          or destroying will be responnsible for damages and punishment</p>
 
-         </div>
-         <button type="submit" class="subbtn" >Submit</button>
+      </div>
+      <button type="submit" class="subbtn">Submit</button>
     </form>
   </div>
 </div>

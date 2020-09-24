@@ -5,8 +5,12 @@
   box-sizing: border-box;
  font-family: 'Roboto', sans-serif;
 }
+
 body {
   background-color: #c4c4c4;
+ background-image : url("/images/headmanBack.svg");
+  background-repeat: no-repeat;
+
 }
 
 .header1 {
@@ -169,8 +173,26 @@ section {
      margin-right: 5px;
    }
 /*footer*/
+.footer {
+  width : 40%;
+  height:  50px;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
+  position: relative;
+}
 .foot{
-  color : #a9a9a9;
+  position:relative;
+
+
+  color : #c4c4c4;
   font-size: 15px;
   text-align: center;
 }
