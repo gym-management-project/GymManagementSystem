@@ -149,9 +149,16 @@ section {
    }
    .subbtn{
      border-radius: 30px;
+     color: black;
+     background-color: transparent;
+     border : 2px solid black;
      padding: 10px;
      margin-top: 30px;
      width: 150px;
+   }
+   .subbtn:hover{
+     background-color: black;
+     color: white;
    }
    #term , .conditions{
      font-size: 12px;
@@ -161,3 +168,9 @@ section {
      margin-top :5px;
      margin-right: 5px;
    }
+/*footer*/
+.foot{
+  color : #a9a9a9;
+  font-size: 15px;
+  text-align: center;
+}
