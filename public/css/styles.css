@@ -121,7 +121,7 @@ section {
    }
    .detailsInfo:before{
      content: "";
-     width: 40%;
+     width: 250px;
      height : 2px;
      background: #e5e5e5;
      position: absolute;
@@ -131,7 +131,7 @@ section {
    }
    .detailsInfo:after{
      content: "";
-     width: 40%;
+     width: 250px;
      height : 2px;
      background: #e5e5e5;
      position: absolute;
@@ -173,4 +173,24 @@ section {
   color : #a9a9a9;
   font-size: 15px;
   text-align: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 1468px) {
+  .detailsInfo:after,.detailsInfo:before{
+      width: 150px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .detailsInfo:after,.detailsInfo:before{
+      width: 100px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .detailsInfo:after,.detailsInfo:before{
+      width: 50px;
+  }
 }
