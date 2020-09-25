@@ -157,8 +157,9 @@ section {
      background-color: transparent;
      border : 2px solid black;
      padding: 10px;
-     margin-top: 30px;
+    
      width: 150px;
+     margin: auto;
    }
    .subbtn:hover{
      background-color: black;
