@@ -4,6 +4,7 @@
   padding:0;
   box-sizing: border-box;
  font-family: 'Roboto', sans-serif;
+ font-size: 1rem;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
   margin:20px;
   background-color: white;
   border-radius: 30px;
-  height:55px;
+  height:85px;
   width:85%;
   margin-left: auto;
   margin-right: auto;
@@ -50,7 +51,7 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
 .nav-bar li a {
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 .nav-bar li a:hover {
   color: #e5e5e5;
@@ -99,6 +100,9 @@ section {
     -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
 
+   }
+   label{
+     font-size: 20px;
    }
    .user-details{
      position: relative;
@@ -157,7 +161,7 @@ section {
      background-color: transparent;
      border : 2px solid black;
      padding: 10px;
-    
+
      width: 150px;
      margin: auto;
    }
@@ -173,15 +177,64 @@ section {
      margin-top :5px;
      margin-right: 5px;
    }
-/*footer*/
+
+
+
+
+
+
+
+
+
+
+   /*-------------------------------------------------
+                       SUSCRIPTIONS
+     -------------------------------------------------*/
+
+
+.subs-top-container{
+  text-decoration: none;
+
+}
+
+.user-card{
+  width : 85%;
+  height : 200px;
+  background-color: white;
+  margin: 40px auto  auto;
+  border-radius: 30px;
+
+}
+.user-card:hover{
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
+}
+
+
+
+
+
+
+
+
+
+   /*-------------------------------------------------
+                       FOOTER
+     -------------------------------------------------*/
+
+
+
+
 .footer {
+
   width : 40%;
   height:  50px;
   text-align: center;
   padding: 10px;
   background-color: white;
   border: none;
-  margin: auto;
+  margin: 30px auto;
   margin-bottom: 30px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.24);
@@ -200,20 +253,55 @@ section {
 
 
 
+/*
 
-
-@media only screen and (max-width: 1468px) {
+@media (max-width: 1468px) {
+  *{
+    font-size: 16px;
+  }
   .detailsInfo:after,.detailsInfo:before{
       width: 150px;
   }
 }
-@media only screen and (max-width: 900px) {
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  *{
+    font-size: 20px;
+  }
   .detailsInfo:after,.detailsInfo:before{
       width: 100px;
   }
-}
-@media only screen and (max-width: 700px) {
+} */
+
+
+
+
+
+@media  (max-width: 700px) {
+  .nav-bar li a{
+    font-size: 20px;
+  }
+  label{
+    font-size: 15px;
+  }
+
+  /*users*/
+
   .detailsInfo:after,.detailsInfo:before{
       width: 50px;
+  }
+
+  /*subscription*/
+
+  .user-card{
+       width : 85%;
+       height: 400px;
   }
 }

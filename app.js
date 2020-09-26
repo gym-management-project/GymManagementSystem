@@ -17,6 +17,12 @@ app.get("/addusers",(req,res) => {
   res.render("addUser");
 });
 
+
+app.get("/",(req,res) => {
+  res.render("index");
+});
+
+
 app.post("/addusers",(req,res) => {
   var num = req.body;
   console.log(num);
