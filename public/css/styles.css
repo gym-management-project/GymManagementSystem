@@ -18,7 +18,7 @@ body {
   margin:20px;
   background-color: white;
   border-radius: 30px;
-  height:85px;
+  height:60px;
   width:85%;
   margin-left: auto;
   margin-right: auto;
@@ -307,14 +307,8 @@ section {
 }
 
  /*-------------------------------------------------
-                     BMI calculator
+                     calculators
    -------------------------------------------------*/
-  font-family: Roboto;
-      background-color: #c4c4c4;
-      background-image : url("/images/headmanBack.svg");
-      background-repeat: no-repeat;
-      }
-
       #container {
       height: 525px;
       width: 360px;
@@ -343,7 +337,7 @@ section {
       }
 
       form input[type="text"] {
-      width=90px;
+      width : 90px;
       }
 
       input {
@@ -353,7 +347,7 @@ section {
       #w {
       font-size: 14px;
       /*color: #2980b9;*/
-      color: #red;
+      color: red;
       background-color: #f7f7f7;
       width: 60%;
       padding: 5px 5px 8px 8px;
@@ -369,7 +363,7 @@ section {
       width: 60%;
       padding: 5px 5px 8px 8px;
       margin-left: 20px;
-      color: #red;
+      color: red;
       background-color: #f7f7f7;
       font-size: 14px;
       }
@@ -427,4 +421,3 @@ section {
       font-weight: bold;
       display: block;
       }
-
