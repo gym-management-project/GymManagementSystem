@@ -18,8 +18,8 @@ app.get("/addusers",(req,res) => {
 });
 
 
-app.get("/",(req,res) => {
-  res.render("index");
+app.get("/user/calculator",(req,res) => {
+  res.render("calculators");
 });
 
 

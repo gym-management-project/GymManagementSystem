@@ -320,14 +320,12 @@ section {
       -moz-border-radius: 20px;
       }
 
-      h1 {
-      background: #1F030C;
+      .type_calculator{
+      background-image :linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
       color: white;
-      margin: 0;
       padding: 10px 100px;
-      text-transform: uppercase;
+      text-align: center;
       font-size: 18px;
-      font-weight: normal;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
       }
@@ -336,13 +334,13 @@ section {
       padding-left: 20px;
       }
 
-      form input[type="text"] {
+      /* .calForm input[type="text"] {
       width : 90px;
       }
 
       input {
       padding-left: 20px;
-      }
+      } */
 
       #w {
       font-size: 14px;
