@@ -9,14 +9,14 @@
      7) subscription
      8) money paid
      9) previous incidents
-  -->
+   -->
 
 
 
 <%- include("partials/headerManagement"); -%>
 <div class="form">
   <div class="form-container">
-    <form class="users-detail" action="/addusers" method="post" style="margin-bottom : 50px; padding-bottom:50px;">
+    <form class="users-detail" action="/addusers" method="post" style="margin-bottom : 50px; padding-bottom:50px;" enctype="multipart/form-data">
 
       <p class="detailsInfo">Personal details</p>
 
@@ -33,17 +33,21 @@
       <div class="form-row">
         <div class="col-auto">
           <label for="inline">Phone Number</label>
-          <input type="tel" name="Pnum1" class="form-control" placeholder="Phone number" id="inline" required autocomplete="on">
+          <input type="tel" name="pnum1" class="form-control" placeholder="Phone number" id="inline" required autocomplete="on">
         </div>
         <div class="col-auto colright">
           <label for="inline">second Phone Number</label>
-          <input type="tel" name="Pnum2" class="form-control" placeholder="Phone number" id="inline" autocomplete="on">
+          <input type="tel" name="pnum2" class="form-control" placeholder="Phone number" id="inline" autocomplete="on">
         </div>
       </div>
       <div class="form-row">
-        <div class="col">
-          <label for="inline">Address</label>
-          <input type="text" name="address" class="form-control" placeholder="Address" id="inline" required autocomplete="on">
+        <div class="col-auto">
+          <label for="inline">House No.</label>
+          <input type="text" name="hno" class="form-control" placeholder="House No." id="inline" required autocomplete="off">
+        </div>
+        <div class="col-auto">
+          <label for="inline">House No.</label>
+          <input type="text" name="city" class="form-control" placeholder="city" id="inline" required autocomplete="off">
         </div>
       </div>
       <div class="form-row">
@@ -75,7 +79,7 @@
           <p>Upload picture</p>
           <div class="custom-file">
             <label class="custom-file-label" for="customFile">Choose photo</label>
-            <input type="file" class="custom-file-input form-control" id="customFile">
+            <input type="file" name="profilepic" class="custom-file-input form-control" id="customFile">
 
           </div>
 
@@ -114,17 +118,24 @@
       </div>
       <p class="detailsInfo">Subscriptions details</p>
       <div class="form-row">
-        <div class="col">
+        <div class="col-auto">
           <div class="form-group">
             <label for="exampleFormControlSelect1">Package</label>
             <select name="package" class="form-control" id="exampleFormControlSelect1" required>
-              <option>1 months</option>
-              <option>4 months</option>
-              <option>6 months</option>
-              <option>1 year</option>
-              <option>1.5 year</option>
+              <option>1</option>
+              <option>4</option>
+              <option>6</option>
+              <option>1</option>
+              <option>1.5</option>
             </select>
           </div>
+        </div>
+        <div class="col-auto">
+          <label for="inline">
+          Type
+          </label>
+          <input type="text" name="type" placeholder="cardio" id="inline" class=" form-control" required autocomplete="on">
+
         </div>
       </div>
       <div class="form-row">
