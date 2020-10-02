@@ -1,0 +1,173 @@
+<%- include("partials/headerManagement"); -%>
+
+
+<div class="form">
+
+  <div class="form-container">
+    <form class="users-detail" id="userInfo" style="margin-bottom : 50px; padding-bottom:50px;" action="/subscriptions/<%=foundUser._id%>" enctype="multipart/form-data">
+
+      <p class="detailsInfo">Personal details</p>
+
+      <div class="form-row">
+        <div class="col-auto">
+          <div class="image-userInfo">
+
+            <img class="profile-image-userInfo" src="data:foundUser/<%=foundUser.profilepic.contentType%>;base64,<%=foundUser.profilepic.data.toString('base64')%>" alt="profile-pic">
+          </div>
+          <div class="gymId">
+            <h4>GYM ID : <span><%=foundUser._id%></span></h4>
+          </div>
+
+        </div>
+        <div class="col-auto">
+          <div class="form-row">
+            <div class="col-auto">
+              <label for="inline">First name</label>
+              <input type="text" name="fname" class="form-control" id="inline" placeholder="<%=foundUser.fname%>" disabled required autocomplete="on">
+            </div>
+            <div class="col-auto colright">
+              <label for="inline">Last name</label>
+              <input type="text" name="lname" class="form-control" id="inline" placeholder="<%=foundUser.lname%>"  disabled required autocomplete="on">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-auto">
+              <label for="inline">Phone Number</label>
+              <input type="tel" name="pnum1" class="form-control" placeholder="<%=foundUser.pnum1%>" id="inline" disabled required autocomplete="on">
+            </div>
+            <div class="col-auto colright">
+              <label for="inline">second Phone Number</label>
+              <input type="tel" name="pnum2" class="form-control" placeholder="<%=foundUser.pnum2%>" id="inline" disabled autocomplete="on">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-auto">
+              <label for="inline">House No.</label>
+              <input type="text" name="hno" class="form-control" placeholder="<%=foundUser.hno%>." id="inline"  disabled required autocomplete="off">
+            </div>
+            <div class="col-auto">
+              <label for="inline">City</label>
+              <input type="text" name="city" class="form-control" placeholder="<%=foundUser.city%>" id="inline"  disabled required autocomplete="off">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inline">D.O.B</label>
+          <input type="date" name="dob" class="form-control" id="inline" placeholder="<%=foundUser.dob%>" disabled required autocomplete="on">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Sex</label>
+            <select name="sex" class="form-control" disabled id="exampleFormControlSelect1" placeholder="<%=foundUser.sex%>" required>
+
+              <option>Male</option>
+              <option>Female</option>
+              <option>Others</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inline">email</label>
+          <input type="email" name="email" class="form-control" id="inline"  disabled placeholder="<%=foundUser.email%>" required autocomplete="on">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <p>Upload picture</p>
+          <div class="custom-file">
+            <label class="custom-file-label" for="inline">Choose photo</label>
+            <input type="file" name="profilepic" class="custom-file-input form-control" dialbled id="inline">
+          </div>
+        </div>
+      </div>
+      <p class="detailsInfo">Family details</p>
+      <div class="form-row">
+        <div class="col-auto">
+          <label for="inline">Family member name</label>
+          <input type="text" name="famName" class="form-control" placeholder="<%=foundUser.famName%>"  disabled id="inline" required autocomplete="on">
+        </div>
+        <div class="col-auto">
+          <label for="inline">Relation</label>
+          <input type="text" name="relation" class="form-control"  disabled placeholder="r<%=foundUser.relation%>" id="inline" required autocomplete="on">
+        </div>
+        <div class="col-auto colright">
+          <label for="inline"> phone number</label>
+          <input type="tel" name="famPnum" class="form-control" placeholder="<%=foundUser.famPnum%>"  disabled id="inline" autocomplete="on">
+        </div>
+      </div>
+      <p class="detailsInfo">Medical details</p>
+      <div class="form-row">
+        <div class="col-auto">
+
+          <label for="inline">
+            Bone Injury
+          </label>
+          <input type="text" name="boneInjury" placeholder="<%=foundUser.boneInjury%>"  disabled id="inline" class=" form-control" required autocomplete="on">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inline">Any disease ?</label>
+          <textarea name="disease" class="form-control" id="inline" placeholder="<%=foundUser.disease%>" autocomplete="on" disabled></textarea>
+        </div>
+      </div>
+      <p class="detailsInfo">Subscriptions details</p>
+      <div class="form-row">
+        <div class="col-auto">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Package</label>
+            <select name="package" class="form-control" id="exampleFormControlSelect1"  placeholder="<%=foundUser.package%>" disabled>
+
+              <option>1</option>
+              <option>4</option>
+              <option>6</option>
+              <option>1</option>
+              <option>1.5</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-auto">
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">type</label>
+            <select name="type" class="form-control" id="exampleFormControlSelect1"  placeholder="<%=foundUser.type%>" disabled>
+
+              <option>Aerobics</option>
+              <option>cardio</option>
+              <option>Weight Lifting</option>
+              <option>chest</option>
+              <option>Legs</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inline">Starting Date</label>
+          <input type="date" name="startDate" class="form-control" id="inline" placeholder="<%=foundUser.startDate%>" disabled required autocomplete="on">
+        </div>
+      </div>
+
+
+      <div class="form-row">
+
+
+        <button type="submit" class="subbtn" id="saveBtn" hidden>Save</button>
+
+      </div>
+
+    </form>
+
+    <button type="submit" class="subbtn" id="editBtn" onclick=" return editButton()">Edit</button>
+  </div>
+</div>
+
+<%- include("partials/footer"); -%>

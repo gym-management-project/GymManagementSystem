@@ -58,19 +58,42 @@ app.get("/subscriptions",(req,res) => {
      res.render("Subscriptions",{
          users : users
      });
-     console.log(users);
+
   });
 });
+
+app.get("/subscriptions/:id" ,(req,res) =>{
+   User.findOne({_id : req.params.id},(err,foundUser) => {
+       if(foundUser){
+         res.render("userInfo",{
+           foundUser : foundUser
+         });
+       }
+       else{
+         console.log(err);
+       }
+   });
+});
+app.post("/subscriptions/:id" ,(req,res) =>{
+  const id = req.params.id;
+  User.update({_id : id} ,{$set : req.body},(err) =>{
+    if(!err){
+      res.redirect("/subscriptions");
+      console.log("successfully updated");
+    }
+    else{
+      console.log(err);
+    }
+  })
+})
+
+
+
+
 
 app.get("/addusers",(req,res) => {
   res.render("addUser");
 });
-
-
-app.get("/user/calculator",(req,res) => {
-  res.render("calculators");
-});
-
 
 app.post("/addusers",upload,(req,res,next) => {
      const user = new User({
@@ -106,8 +129,14 @@ app.post("/addusers",upload,(req,res,next) => {
        }
      });
 });
-app.post("/subscriptions",(req,res) => {
 
+
+
+
+
+
+app.get("/user/calculator",(req,res) => {
+  res.render("calculators");
 });
 
 app.listen(3000 , () =>{

@@ -1,10 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-
 }
 
 body {
@@ -203,7 +201,7 @@ label {
   margin-top: 20px;
 }
 
-.row-container h4{
+.row-container h4 {
   color: black;
   display: block;
 }
@@ -211,7 +209,7 @@ label {
 .row-container p {
   font-size: 13px;
   margin: 0;
-  color : #c4c4c4;
+  color: #c4c4c4;
 }
 
 .profile-image {
@@ -223,9 +221,9 @@ label {
   border-radius: 100%;
   border: 8px solid black;
 }
-.time-rem{
-  text-align: right;
 
+.time-rem {
+  text-align: right;
 }
 
 .percentage-bar-container {
@@ -242,6 +240,34 @@ label {
   text-align: right;
 }
 
+/*-------------------------------------------------
+                       USER INFO
+     -------------------------------------------------*/
+.image-userInfo {
+  margin: auto;
+}
+
+.profile-image-userInfo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 10px solid black;
+}
+
+.gymId {
+  margin-top: 10px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.gymId h4 {
+  font-size: 18px;
+}
+
+.gymId span {
+  font-size: 15px;
+  color: #c4c4c4;
+}
 
 /*-------------------------------------------------
                        FOOTER
@@ -268,8 +294,6 @@ label {
   font-size: 15px;
   text-align: center;
 }
-
-
 
 /*-------------------------------------------------
                      calculators
@@ -298,7 +322,6 @@ label {
 /* p {
   padding-left: 20px;
 } */
-
 /* .calForm input[type="text"] {
       width : 90px;
       }
@@ -329,8 +352,6 @@ label {
   background-color: #f7f7f7;
   font-size: 14px;
 }
-
-
 
 button {
   background: #AD133A;
@@ -386,46 +407,58 @@ button:active {
   top: -18px;
 }
 
-
-
-
 /*---------------------------------------------
 
                  MEDIA QUERY
 
   --------------------------------------------*/
-
-
-  @media (max-width: 700px) {
-     body{
-         background-image: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
-     }
-
-    /*nav-bar*/
-
-    .nav-bar li a {
-      font-size: 20px;
-    }
-
-    /*users*/
-    .detailsInfo:after, .detailsInfo:before {
-      width: 50px;
-    }
-    label {
-      font-size: 15px;
-    }
-
-    /*subscription*/
-    .col-sm-6{
-      text-align: center;
-    }
-    .time-rem{
-      margin: auto;
-      text-align: center;
-    }
-    .user-card {
-      height: 500px;
-      width: 85%;
-    }
-
+@media (max-width: 700px) {
+  body {
+    background-image: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
   }
+
+  /*nav-bar*/
+  .nav-bar li a {
+    font-size: 20px;
+  }
+
+  /*users*/
+  .detailsInfo:after, .detailsInfo:before {
+    width: 50px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  /*subscription*/
+  .col-sm-6 {
+    text-align: center;
+  }
+
+  .time-rem {
+    margin: auto;
+    text-align: center;
+  }
+
+  .user-card {
+    height: 500px;
+    width: 85%;
+  }
+
+  /*userInfo*/
+  .gymId {
+    text-align: center;
+  }
+
+  .image-userInfo {
+    margin-bottom: 20px;
+  }
+
+  .profile-image-userInfo {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 10px solid black;
+  }
+}

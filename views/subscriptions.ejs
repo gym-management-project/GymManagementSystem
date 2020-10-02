@@ -3,50 +3,50 @@
 
 <% users.forEach((user) => {%>
 
-  <a class="subs-top-container" href="/subscriptions/<%=user._id%>">
-    <div class="user-card">
-      <div class="row-container row">
-        <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm-6">
-              <img class="profile-image" src="data:user/<%=user.profilepic.contentType%>;base64,<%=user.profilepic.data.toString('base64')%>" alt="profile-pic">
-            </div>
-            <div class="col-sm-6">
-              <h4 style="margin-top : 10px;"><%=user.fname + " "+ user.lname%></h4>
-              <div class="para-info">
-                <p><%=user.dob%></p>
-                <p><%=user.pnum1%></p>
-                <p><%=user.hno%></p>
-                <p><%=user.city%></p>
-                <p><%=user.email%></p>
-              </div>
+<a class="subs-top-container" href="/subscriptions/<%=user._id%>">
+  <div class="user-card">
+    <div class="row-container row">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-6">
+            <img class="profile-image" src="data:user/<%=user.profilepic.contentType%>;base64,<%=user.profilepic.data.toString('base64')%>" alt="profile-pic">
+          </div>
+          <div class="col-sm-6">
+            <h4 style="margin-top : 10px;"><%=user.fname + " "+ user.lname%></h4>
+            <div class="para-info">
+              <p><%=user.dob%></p>
+              <p><%=user.pnum1%></p>
+              <p><%=user.hno%></p>
+              <p><%=user.city%></p>
+              <p><%=user.email%></p>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 right-info">
-          <div class="row">
-            <div class="col">
-              <h4>GYM ID</h4>
-              <p><%=user._id%></p>
-              <div class="para-info">
-                <p><%=user.type%></p>
-                <p><%=user.package%></p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-                <p class="time-rem">time rem</p>
-            </div>
-
-          </div>
-       </div>
       </div>
-      <div class="percentage-bar row-container row">
+      <div class="col-sm-6 right-info">
+        <div class="row">
+          <div class="col">
+            <h4>GYM ID</h4>
+            <p><%=user._id%></p>
+            <div class="para-info">
+              <p><%=user.type%></p>
+              <p><%=user.package%></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="time-rem">time rem</p>
+          </div>
 
+        </div>
       </div>
     </div>
-  </a>
+    <div class="percentage-bar row-container row">
+
+    </div>
+  </div>
+</a>
 
 <%});%>
 
