@@ -84,8 +84,8 @@ app.post("/subscriptions/:id" ,(req,res) =>{
     else{
       console.log(err);
     }
-  })
 })
+});
 
 
 
