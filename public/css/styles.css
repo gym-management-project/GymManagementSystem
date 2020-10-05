@@ -298,115 +298,101 @@ label {
 /*-------------------------------------------------
                      calculators
    -------------------------------------------------*/
-#container {
-  height: 525px;
-  width: 360px;
-  margin: 100px auto;
-  background: #f7f7f7;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
+		body{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-family: sans-serif;
+			background-image: linear-gradient(120deg,#ff6b6b, #5f27cd);
+			min-height: 100vh;
+		}
+		div{position: absolute;
+			width: 500px;
+			top: 50%;
+			left: 50%;
+			background-color: #fff;
+			transform: translate(-50%, -50%);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 1px 1px 20px #ee5253;
+
+		}
+		h2{
+			font-size: 30px;
+			font-weight: 600;
+		}
+		.text{
+			text-align: left;
+			margin-left: 150px;
+		}
+		#w, #h{
+			color: #222f3e;
+			text-align: left;
+			font-size: 20px;
+			font-weight: 200;
+			outline: none;
+			border: none;
+			background: none;
+			border-bottom: 1px solid #341f97;
+			width: 200px;
+		}
+			#w:focus, #h:focus{
+				border-bottom: 2px solid #341f97;
+				width: 300px;
+				transition: 0.5s;
+			}
+			#result{
+				color: #341f97;
+			}
+			#btn{
+				font-family: inherit;
+				margin-top: 10px;
+				border: none;
+				color: #fff;
+				background-image: linear-gradient(120deg,#ff6b6b, #5f27cd);
+				width: 150px;
+				padding: 10px;
+				border-radius: 30px;
+				outline: none;
+				cursor: pointer;
+			}
+			#btn:hover{
+				box-shadow: 1px 1px 10px #341f97;
+			}
+			#info{
+				font-size: 12px;
+				font-family: inherit;
+			}
+			#cal{
+				margin-top: 150px;
+				margin-bottom: 100px;
+			}
+			.choose {
+				padding: 15px;
+				margin-bottom: 30px;
+				border: 5px;
+				margin-left: 15px;
+			}
+			.blue_button{background: none repeat scroll 0 0 #468CD2;
+				border-bottom: 3px solid #3277BC;
+				text-shadow: 1px 1px 0 #214D73;
+				border: medium none;border-radius: 0.3em;
+				color: #FFFFFF;
+				cursor: pointer;
+				font-weight: bold;
+				margin: 5px 0;
+				padding: 7px 14px;}
+.frms input[type="text"], [type="password"], [type="file"], textarea, select {background: none repeat scroll 0 0 #fff;
+	border: 1px solid #ddd;
+	border-radius: 0.35em;
+	height: 35px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 0 0.5%;
+	width: 99%;
 }
-
-.type_calculator {
-  background-image: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
-  color: white;
-  padding: 10px 100px;
-  text-align: center;
-  font-size: 18px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+@media only screen and (max-width:650px) {.resp_code {margin: 5px 1px 10px !important;width:auto !important;}
 }
-
-/* p {
-  padding-left: 20px;
-} */
-/* .calForm input[type="text"] {
-      width : 90px;
-      }
-
-      input {
-      padding-left: 20px;
-      } */
-#w {
-  font-size: 14px;
-  /*color: #2980b9;*/
-  color: red;
-  background-color: #f7f7f7;
-  width: 60%;
-  padding: 5px 5px 8px 8px;
-}
-
-#w:focus {
-  background: #fff;
-  border: 3px solid #2980b9;
-  outline: none;
-}
-
-#h {
-  width: 60%;
-  padding: 5px 5px 8px 8px;
-  margin-left: 20px;
-  color: red;
-  background-color: #f7f7f7;
-  font-size: 14px;
-}
-
-button {
-  background: #AD133A;
-  border-radius: 5px;
-  color: white;
-  display: block;
-  font-size: 17px;
-  font-weight: bold;
-  height: 50px;
-  margin: 30px auto;
-  text-transform: uppercase;
-  width: 200px;
-}
-
-button:hover {
-  background: #4c2827;
-  border-bottom-color: #111;
-}
-
-button:active {
-  position: relative;
-  top: 1px;
-}
-
-#GENDER {
-  font-size: 15px;
-  padding: 13px 25px 10px 20px;
-  margin-left: 0;
-}
-
-#result {
-  font-size: 30px;
-  margin-top: 5px;
-  text-align: center;
-}
-
-#result:before {
-  content: "Result";
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-#result small {
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#result sup {
-  font-size: 20px;
-  top: -18px;
-}
-
 /*---------------------------------------------
 
                  MEDIA QUERY
