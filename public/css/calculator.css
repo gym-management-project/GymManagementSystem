@@ -6,7 +6,8 @@ body{
   background-image: linear-gradient(120deg,#ff6b6b, #5f27cd);
   min-height: 100vh;
 }
-div{position: absolute;
+
+.divCAL{position: absolute;
   width: 500px;
   top: 50%;
   left: 50%;
@@ -17,7 +18,7 @@ div{position: absolute;
   box-shadow: 1px 1px 20px #ee5253;
 
 }
-h2{
+.typeCal{
   font-size: 30px;
   font-weight: 600;
 }
