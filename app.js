@@ -134,6 +134,14 @@ app.post("/addusers",upload,(req,res,next) => {
 
 
 
+app.get("/attendance" , (req,res)=>{
+  res.render("attendance");
+});
+
+
+
+
+
 
 app.get("/user/calculator",(req,res) => {
   res.render("calculators");
