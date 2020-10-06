@@ -1,21 +1,71 @@
-body{
-  margin: 0;
-  padding: 0;
-  text-align: center;
+body {
+  background-color: #c4c4c4;
+  background-image: url("/images/Scattered-Forcefields (1).svg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align :center;
   font-family: sans-serif;
-  background-image: linear-gradient(120deg,#ff6b6b, #5f27cd);
-  min-height: 100vh;
+}
+.box{
+  margin-top: 30px;
 }
 
-.divCAL{position: absolute;
+.header1 {
+  margin: 20px;
+  background-color: white;
+  border-radius: 30px;
+  height: 60px;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.logo {
+  padding-top: 5px;
+}
+
+.logo img {
+  height: 75px;
+}
+
+.nav-bar {
+  position: relative;
+  top: 7px;
+}
+
+.nav-bar li {
+  display: inline;
+  padding-right: 20px;
+}
+
+.nav-bar li a {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.nav-bar li a:hover {
+  color: #e5e5e5;
+}
+.buttons {
+  margin-top:30px;
+}
+
+.divCAL{
   width: 500px;
-  top: 50%;
-  left: 50%;
   background-color: #fff;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 1px 1px 20px #ee5253;
+
 
 }
 .typeCal{
@@ -34,23 +84,23 @@ body{
   outline: none;
   border: none;
   background: none;
-  border-bottom: 1px solid #341f97;
+  border-bottom: 1px solid #fe5858;
   width: 200px;
 }
   #w:focus, #h:focus{
-    border-bottom: 2px solid #341f97;
+    border-bottom: 2px solid #fe5858;
     width: 300px;
     transition: 0.5s;
   }
   #result{
-    color: #341f97;
+    color: #fe5858;
   }
   #btn{
     font-family: inherit;
     margin-top: 10px;
     border: none;
     color: #fff;
-    background-image: linear-gradient(120deg,#ff6b6b, #5f27cd);
+    background-image: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
     width: 150px;
     padding: 10px;
     border-radius: 30px;
@@ -58,16 +108,14 @@ body{
     cursor: pointer;
   }
   #btn:hover{
-    box-shadow: 1px 1px 10px #341f97;
+    box-shadow: 1px 1px 10px #fe5858;
   }
   #info{
     font-size: 12px;
     font-family: inherit;
   }
-  #cal{
-    margin-top: 150px;
-    margin-bottom: 100px;
-  }
+
+
   .choose {
     padding: 15px;
     margin-bottom: 30px;
