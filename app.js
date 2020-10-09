@@ -96,7 +96,9 @@ app.get("/subscriptions",(req,res) => {
 
 });
 
-
+app.get("/",(req,res) =>{
+  res.redirect("/user/calculator");
+})
 
 
 app.get("/subscriptions/:id" ,(req,res) =>{
