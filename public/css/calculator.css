@@ -58,7 +58,7 @@ body {
 }
 
 .divCAL{
-  width: 500px;
+  width : 25%;
   background-color: #fff;
   margin: auto;
   margin-top: 30px;
@@ -73,8 +73,8 @@ body {
   font-weight: 600;
 }
 .text{
-  text-align: left;
-  margin-left: 150px;
+  text-align: center;
+  
 }
 #w, #h{
   color: #222f3e;
@@ -140,5 +140,10 @@ margin-top: 5px;
 padding: 0 0.5%;
 width: 99%;
 }
-@media only screen and (max-width:650px) {.resp_code {margin: 5px 1px 10px !important;width:auto !important;}
+@media only screen and (max-width:650px) {
+  .divCAL{
+    width : 85%;
+  }
+  .resp_code {margin: 5px 1px 10px !important;
+    width:auto !important;}
 }

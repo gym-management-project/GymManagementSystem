@@ -1,3 +1,6 @@
+//mongod atlas   username - Admin-shray
+//               password - projectgym
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs =require("ejs");
@@ -35,7 +38,7 @@ const userSchema = {
 
 
 
-mongoose.connect("mongodb://localhost:27017/subscriberDB",{useNewUrlParser :true ,useUnifiedTopology : true});
+mongoose.connect("mongodb+srv://Admin-shary:projectgym@cluster0.gul6g.mongodb.net/subscriberDB",{useNewUrlParser :true ,useUnifiedTopology : true});
 const User = mongoose.model("User",userSchema);
 
 const storage = multer.diskStorage({
