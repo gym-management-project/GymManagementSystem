@@ -97,7 +97,7 @@ app.get("/subscriptions",(req,res) => {
 });
 
 app.get("/",(req,res) =>{
-  res.redirect("/user/calculator");
+  res.render("index");
 })
 
 
