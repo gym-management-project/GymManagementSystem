@@ -241,6 +241,8 @@ label {
   text-align: right;
 }
 
+
+
 /*-------------------------------------------------
                        USER INFO
      -------------------------------------------------*/
@@ -269,6 +271,53 @@ label {
   font-size: 15px;
   color: #c4c4c4;
 }
+#deleteBtn ,#editButton{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  color : white;
+  border: none;
+  right : 30px;
+  position: absolute;
+}
+#deleteBtn{
+  background-color: red;
+}
+#editButton{
+
+  background-color: #339aef;
+}
+.form-info {
+  position: relative;
+}
+#savebtn {
+  border-radius: 30px;
+  color: #339aef;
+  background-color: transparent;
+  border: 2px solid #339aef;
+  padding: 10px;
+  width: 150px;
+  margin: auto;
+}
+
+#savebtn:hover {
+  background-color: #339aef;
+  color: white;
+}
+#delbtn {
+  border-radius: 30px;
+  color: red;
+  background-color: transparent;
+  border: 2px solid red;
+  padding: 10px;
+  width: 150px;
+  margin: auto;
+}
+
+#delbtn:hover {
+  background-color: red;
+  color: white;
+}
 
 /*-------------------------------------------------
                        FOOTER
@@ -295,6 +344,7 @@ label {
   font-size: 15px;
   text-align: center;
 }
+
 
 /*-------------------------------------------------
                      calculators
@@ -353,5 +403,8 @@ label {
     height: 150px;
     border-radius: 100%;
     border: 10px solid black;
+  }
+  #deleteBtn,#editButton{
+    display: none;
   }
 }

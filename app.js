@@ -53,14 +53,46 @@ app.set("view engine" , "ejs");
 app.use(bodyParser.urlencoded ({extended : true}));
 app.use(express.static("public"));
 
+
+app.get("/autocomplete/",(req,res,next) => {
+       var regex  =  new RegExp(req.query["term"],'i');
+       var nameFilter = User.find({fname : regex  } , {'fname' : 1, 'lname' :1}).sort({"updated_at" : -1}).sort({"created_at":-1});
+       nameFilter.exec((err,data) =>{
+
+         var result = [];
+         if(!err){
+           if(data && data.length>0){
+             data.forEach(user => {
+               let obj  =  {
+                 id : user._id ,
+                 label : user.fname
+               };
+               result.push(obj);
+             });
+           }
+            console.log(result);
+           res.jsonp(result);
+         }
+       });
+})
+
+
+
+
 app.get("/subscriptions",(req,res) => {
   User.find({},(err,users) => {
+     console.log(users.length);
      res.render("Subscriptions",{
-         users : users
+         users : users,
+
      });
 
   });
+
 });
+
+
+
 
 app.get("/subscriptions/:id" ,(req,res) =>{
    User.findOne({_id : req.params.id},(err,foundUser) => {
@@ -76,17 +108,31 @@ app.get("/subscriptions/:id" ,(req,res) =>{
 });
 app.post("/subscriptions/:id" ,(req,res) =>{
   const id = req.params.id;
-  User.update({_id : id} ,{$set : req.body},(err) =>{
-    if(!err){
-      res.redirect("/subscriptions");
-      console.log("successfully updated");
-    }
-    else{
-      console.log(err);
-    }
-})
+    User.update({_id : id} ,{$set : req.body},(err) =>{
+      if(!err){
+        res.redirect("/subscriptions");
+        console.log("successfully updated");
+      }
+      else{
+        console.log(err);
+      }
+  });
 });
 
+
+app.post("/delete/:id",(req,res) =>{
+      const del_id = req.params.id;
+      console.log(del_id);
+      User.deleteOne({_id : del_id} ,(err) =>{
+        if(!err){
+          res.redirect("/subscriptions");
+          console.log("successfully deleted");
+        }
+        else{
+          console.log(err);
+        }
+    });
+});
 
 
 

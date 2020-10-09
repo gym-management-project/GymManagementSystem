@@ -4,6 +4,7 @@
 <% users.forEach((user) => {%>
 
 <a class="subs-top-container" href="/subscriptions/<%=user._id%>">
+
   <div class="user-card">
     <div class="row-container row">
       <div class="col-sm-6">
@@ -30,13 +31,13 @@
             <p><%=user._id%></p>
             <div class="para-info">
               <p><%=user.type%></p>
-              <p><%=user.package%></p>
+              <p><%=user.package%> months</p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <p class="time-rem">time rem</p>
+            <p class="time-rem"><%=user.startDate.getMonth()%></p>
           </div>
 
         </div>
