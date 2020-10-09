@@ -87,7 +87,7 @@ app.get("/autocomplete/",(req,res,next) => {
 app.get("/subscriptions",(req,res) => {
   User.find({},(err,users) => {
      console.log(users.length);
-     res.render("Subscriptions",{
+     res.render("subscriptions",{
          users : users,
 
      });
