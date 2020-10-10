@@ -104,8 +104,18 @@ app.get("/",(req,res) =>{
 app.get("/subscriptions/:id" ,(req,res) =>{
    User.findOne({_id : req.params.id},(err,foundUser) => {
        if(foundUser){
+
+           var dateToday = new Date();
+           monthToday=dateToday.getMonth();
+           var remainingMonths = foundUser.startDate.getMonth()+foundUser.package-monthToday;
+           var remainingDays = foundUser.startDate.getDate() - dateToday.getDate();
+
+
+
          res.render("userInfo",{
-           foundUser : foundUser
+           foundUser : foundUser,
+           remainingMonths : remainingMonths,
+           remainingDays : remainingDays
          });
        }
        else{

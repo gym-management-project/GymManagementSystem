@@ -1,8 +1,11 @@
 <%- include("partials/headerManagement"); -%>
 
-
+<h1></h1>
 <div class="form form-info">
-  <button type="submit"  id="deleteBtn"formaction="/delete/<%=foundUser._id%>"  name="action" value="Delete" hidden ><i class="fas fa-trash"></i></button>
+<div class="status-bar">
+
+  <p class="status-content"><%=remainingMonths%> Months,<%=remainingDays%> Days remaining.</p>
+</div>
   <button type="button" name="edit" id="editButton" onclick="return editButton()"><i class="fas fa-user-edit"></i></button>
   <div class="form-container">
     <form class="users-detail" id="userInfo" style="margin-bottom : 50px; padding-bottom:50px;" method ="post"action="/subscriptions/<%=foundUser._id%>">

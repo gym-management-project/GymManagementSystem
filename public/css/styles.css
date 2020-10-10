@@ -6,10 +6,11 @@
 }
 
 body {
-  background-color: #c4c4c4;
-  background-image: url("/images/Pattern-Randomized.svg");
+
+  background-image: url("/images/Component 1.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #fef4eb;
 }
 
 .header1 {
@@ -77,7 +78,7 @@ section {
 
 .form {
   background-color: white;
-  width: 85%;
+  width: 60%;
   padding-top: 50px;
   margin: auto;
   border-radius: 30px;
@@ -118,7 +119,7 @@ label {
 
 .detailsInfo:before {
   content: "";
-  width: 250px;
+  width: 150px;
   height: 2px;
   background: #e5e5e5;
   position: absolute;
@@ -129,7 +130,7 @@ label {
 
 .detailsInfo:after {
   content: "";
-  width: 250px;
+  width: 150px;
   height: 2px;
   background: #e5e5e5;
   position: absolute;
@@ -240,23 +241,40 @@ label {
 .right-info {
   text-align: right;
 }
-.db-status{
+
+.db-status {
   position: absolute;
-  top : 45%;
-  left : 45%;
+  top: 45%;
+  left: 45%;
   text-align: center;
 }
-.empty-database{
 
-   font-size: 100px;
-   color: red;
+.empty-database {
+  font-size: 100px;
+  color: red;
 }
-
-
 
 /*-------------------------------------------------
                        USER INFO
      -------------------------------------------------*/
+     .form-info {
+       padding-top:0;
+
+     }
+.status-bar{
+  background-color: red;
+  opacity: 0.8;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius:30px 30px 0 0 ;
+}
+.status-content{
+  font-family: sans-serif;
+  font-weight: 300;
+  color : white;
+ margin: 0;
+}
 .image-userInfo {
   margin: auto;
 }
@@ -282,25 +300,23 @@ label {
   font-size: 15px;
   color: #c4c4c4;
 }
-#deleteBtn ,#editButton{
+
+#editButton {
   border-radius: 100%;
   width: 50px;
   height: 50px;
-  color : white;
+  color: white;
   border: none;
-  right : 30px;
+  top : 100px;
+  right: 30px;
   position: absolute;
-}
-#deleteBtn{
-  background-color: red;
-}
-#editButton{
-
   background-color: #339aef;
 }
+
 .form-info {
   position: relative;
 }
+
 #savebtn {
   border-radius: 30px;
   color: #339aef;
@@ -315,6 +331,7 @@ label {
   background-color: #339aef;
   color: white;
 }
+
 #delbtn {
   border-radius: 30px;
   color: red;
@@ -356,11 +373,9 @@ label {
   text-align: center;
 }
 
-
 /*-------------------------------------------------
                      calculators
    -------------------------------------------------*/
-
 /*---------------------------------------------
 
                  MEDIA QUERY
@@ -368,15 +383,19 @@ label {
   --------------------------------------------*/
 @media (max-width: 700px) {
 
-
   /*nav-bar*/
   .nav-bar li a {
     font-size: 20px;
   }
 
   /*users*/
+  .form {
+    width: 85%;
+  }
   .detailsInfo:after, .detailsInfo:before {
-    width: 50px;
+    width: 20px;
+    margin-left:-10px;
+    margin-right:-10px;
   }
 
   label {
@@ -397,15 +416,18 @@ label {
     height: 500px;
     width: 85%;
   }
-  .db-status{
-    left : 34%;
+
+  .db-status {
+    left: 34%;
   }
-  .db-status-info{
+
+  .db-status-info {
     font-size: 0.8rem;
   }
-  .empty-database{
-     font-size: 60px;
-}
+
+  .empty-database {
+    font-size: 60px;
+  }
 
   /*userInfo*/
   .gymId {
@@ -422,7 +444,8 @@ label {
     border-radius: 100%;
     border: 10px solid black;
   }
-  #deleteBtn,#editButton{
+
+  #editButton {
     display: none;
   }
 }

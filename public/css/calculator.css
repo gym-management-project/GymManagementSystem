@@ -1,6 +1,6 @@
 body {
-  background-color: black;
-  background-image: url("/images/Scattered-Forcefields (1).svg");
+  background-color: #f3f6f6;
+  background-image: url("/images/Component 1.svg");
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,7 +65,9 @@ body {
   margin-bottom: 30px;
   padding: 20px;
   border-radius: 10px;
-
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
 
 }
 .typeCal{
@@ -74,7 +76,7 @@ body {
 }
 .text{
   text-align: center;
-  
+
 }
 #w, #h{
   color: #222f3e;
@@ -95,12 +97,14 @@ body {
   #result{
     color: #fe5858;
   }
+
   #btn{
     font-family: inherit;
     margin-top: 10px;
-    border: none;
-    color: #fff;
-    background-image: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
+    border:none;
+    background-image: linear-gradient(to right,#e74e4b,#fb8133);
+    color : white;
+    font-weight: 900;
     width: 150px;
     padding: 10px;
     border-radius: 30px;
@@ -108,8 +112,10 @@ body {
     cursor: pointer;
   }
   #btn:hover{
-    box-shadow: 1px 1px 10px #fe5858;
+        background-image: linear-gradient(to left,#e74e4b,#fb8133);
+      color : white
   }
+
   #info{
     font-size: 12px;
     font-family: inherit;
