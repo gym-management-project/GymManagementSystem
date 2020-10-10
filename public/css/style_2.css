@@ -18,7 +18,7 @@ body{
   margin: 2vh;
   background-color: whitesmoke;
   border-radius: 4vh;
-  height:7%;
+  height:5%;
   width:85%;
   margin-left: auto;
   margin-right: auto;
@@ -32,12 +32,13 @@ body{
 .logo {
   padding-top: 5px;
   margin: 0;
-  width: 9vh;
+  width: 7vh;
+
   float: left;
 }
 
 .logo img {
-  height: 9vh;
+    height: 7vh;
 }
 
 #search_input {
@@ -67,7 +68,7 @@ body{
 .nav {
   display: flex;
   padding-right: 15px;
-  
+
 }
 
 .nav a {
@@ -76,7 +77,7 @@ body{
   font-weight: bold;
   font-size: 15px;
   padding-right: 12px;
-  
+
 }
 
 .nav .icon {
@@ -156,7 +157,7 @@ input{
   padding-bottom: 5px;
   border-bottom: 1px solid rgba(109, 93, 93, 0.4);
   text-align: center;
-  font-family: 'Nunito', sans-serif; 
+  font-family: 'Nunito', sans-serif;
 }
 
 button{
@@ -325,7 +326,7 @@ button{
   -webkit-transition-timing-function:ease-in-out;
           transition-timing-function:ease-in-out;
   -webkit-transition-duration:1.2s;
-          transition-duration:1.2s; 
+          transition-duration:1.2s;
   -webkit-transform:translate3d(640px, 0, 0);
           transform:translate3d(640px, 0, 0);
 }
@@ -396,16 +397,4 @@ button{
 .cont.s-signup .sign-up{
   -webkit-transform:translate3d(0, 0, 0);
           transform:translate3d(0, 0, 0);
-}
-
-
-footer {
-  float:bottom;
-  border: 2px solid black;
-  border-radius: 25px;
-  height: 7%;
-  margin: 15px;
-  background-color: whitesmoke;
-  text-align: center;
-  margin:5%
 }

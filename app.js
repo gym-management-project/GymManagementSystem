@@ -2,7 +2,7 @@
 //               password - projectgym
 // heroku        id - projrctfirstgym@gmail
 //               password - project1@
-//heroku app nname  - warm-headland-44525
+//heroku app name  - warm-headland-44525
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs =require("ejs");
@@ -195,7 +195,9 @@ app.post("/addusers",upload,(req,res,next) => {
 
 
 
-
+app.get("/login",(req,res) =>{
+  res.render("login");
+})
 
 app.get("/attendance" , (req,res)=>{
   res.render("attendance");

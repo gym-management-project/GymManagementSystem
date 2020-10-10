@@ -10,6 +10,7 @@ body {
   background-image: url("/images/Component 1.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
   background-color: #fef4eb;
 }
 

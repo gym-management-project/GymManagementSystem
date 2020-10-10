@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>How to Design Login & Registration Form Transition</title>
+	<title>login - Gym Manager </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="style_2.css">
+  <link rel="stylesheet" type="text/css" href="/css/style_2.css">
+	<link rel="icon" href="/images/barbell.png">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header"> 
+    <div class="header">
         <label class="logo" >
             <img src="images/barbell.png" alt="no logo">
         </label>
@@ -18,7 +19,7 @@
             <input type="text" id="search_input" placeholder=" Search address">
             <img src="images/cross.svg" id="cross">
             <img src="images/search.png" id="search_bar" >
-            <a href="" class="adduser"><img src="images/add-user.png" alt="no img"></a>       
+            <a href="" class="adduser"><img src="images/add-user.png" alt="no img"></a>
         </nav>
     </div>
   <section>
@@ -35,7 +36,7 @@
           </label>
           <button class="submit" type="button">Sign In</button>
           <p class="forgot-pass">Forgot Password ?</p>
-    
+
           <div class="social-media">
             <ul>
               <li><img src="images/facebook.png"></li>
@@ -45,7 +46,7 @@
             </ul>
           </div>
         </div>
-    
+
         <div class="sub-cont">
           <div class="img">
             <div class="img-text m-up">
@@ -84,40 +85,8 @@
         </div>
       </div>
   </section>
-  <footer>
-      <p>All Rights Reserved</p>
-  </footer>
-<script>
-    document.querySelector('.img-btn').addEventListener('click', function()
-	{
-		document.querySelector('.cont').classList.toggle('s-signup')
-	}
-);
 
-document.querySelector("#search_bar").addEventListener("click",function(){
-	x=document.getElementById("search_input");
-	y=document.getElementById("cross");
-	if(x.display="none")
-	{
-		x.style.display="inline";
-		x.focus();
-	}
-	if(y.display="none")
-	{
-		y.style.display="inline";
-	}
-});
 
-document.querySelector("#cross").addEventListener("click",function(){
-	x=document.getElementById("search_input");
-	y=document.getElementById("cross");
-	
-		x.style.display="none";
-	
-		y.style.display="none";
-	
-});
 
-</script>
-</body>
-</html>
+
+<%- include("partials/footer"); -%>
