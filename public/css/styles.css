@@ -14,7 +14,7 @@ body {
   background-color: #fef4eb;
 }
 
-.header1 {
+ .header1 {
   margin: 20px;
   background-color: white;
   border-radius: 30px;
@@ -262,6 +262,9 @@ label {
        padding-top:0;
 
      }
+     .form-info form {
+       margin-top: 30px;
+     }
 .status-bar{
   background-color: red;
   opacity: 0.8;
@@ -281,6 +284,7 @@ label {
 }
 
 .profile-image-userInfo {
+  margin-left:  60px;
   width: 200px;
   height: 200px;
   border-radius: 100%;
@@ -444,6 +448,7 @@ label {
     height: 150px;
     border-radius: 100%;
     border: 10px solid black;
+    margin: 0;
   }
 
   #editButton {

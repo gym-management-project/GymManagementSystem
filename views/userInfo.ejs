@@ -10,7 +10,6 @@
   <div class="form-container">
     <form class="users-detail" id="userInfo" style="margin-bottom : 50px; padding-bottom:50px;" method ="post"action="/subscriptions/<%=foundUser._id%>">
 
-      <p class="detailsInfo">Personal details</p>
 
       <div class="form-row">
         <div class="col-auto">
@@ -48,7 +47,7 @@
           <div class="form-row">
             <div class="col-auto">
               <label for="inline">House No.</label>
-              <input type="text" name="hno" class="form-control" value="<%=foundUser.hno%>." id="inline"  disabled required autocomplete="on">
+              <input type="text" name="hno" class="form-control" value="<%=foundUser.hno%>" id="inline"  disabled required autocomplete="on">
             </div>
             <div class="col-auto">
               <label for="inline">City</label>
@@ -82,7 +81,7 @@
           <input type="email" name="email" class="form-control" id="inline"  disabled value="<%=foundUser.email%>" required autocomplete="on">
         </div>
       </div>
-      <p class="detailsInfo">Family details</p>
+
       <div class="form-row">
         <div class="col-auto">
           <label for="inline">Family member name</label>
@@ -90,14 +89,14 @@
         </div>
         <div class="col-auto">
           <label for="inline">Relation</label>
-          <input type="text" name="relation" class="form-control"  disabled value="r<%=foundUser.relation%>" id="inline" required autocomplete="on">
+          <input type="text" name="relation" class="form-control"  disabled value="<%=foundUser.relation%>" id="inline" required autocomplete="on">
         </div>
         <div class="col-auto colright">
           <label for="inline"> phone number</label>
           <input type="tel" name="famPnum" class="form-control" value="<%=foundUser.famPnum%>"  disabled id="inline" autocomplete="on">
         </div>
       </div>
-      <p class="detailsInfo">Medical details</p>
+
       <div class="form-row">
         <div class="col-auto">
 
@@ -113,18 +112,18 @@
           <textarea name="disease" class="form-control" id="inline" value="<%=foundUser.disease%>" autocomplete="on" disabled></textarea>
         </div>
       </div>
-      <p class="detailsInfo">Subscriptions details</p>
+  
       <div class="form-row">
         <div class="col-auto">
           <div class="form-group">
             <label for="exampleFormControlSelect1">Package</label>
-            <select name="package" class="form-control" id="exampleFormControlSelect1"  value="<%=foundUser.package%>" disabled>
+            <select name="package" class="form-control" id="package"  value="<%=foundUser.package%>" disabled>
 
-              <option>1</option>
-              <option>4</option>
-              <option>6</option>
-              <option>1</option>
-              <option>1.5</option>
+              <option value ="1">1 month</option>
+              <option value ="3">3 month</option>
+              <option value="6"> 6 month</option>
+              <option value="12">1year</option>
+              <option value="18">1.5years</option>
             </select>
           </div>
         </div>
@@ -132,13 +131,13 @@
 
           <div class="form-group">
             <label for="exampleFormControlSelect1">type</label>
-            <select name="type" class="form-control" id="exampleFormControlSelect1"  value="<%=foundUser.type%>" disabled>
+            <select name="type" class="form-control" id="type"  value="<%=foundUser.type%>" disabled>
 
-              <option>Aerobics</option>
-              <option>cardio</option>
-              <option>Weight Lifting</option>
-              <option>chest</option>
-              <option>Legs</option>
+              <option value="1">Aerobics</option>
+              <option value="2">cardio</option>
+              <option value="3">Weight Lifting</option>
+              <option value="4">chest</option>
+              <option value="5">Legs</option>
             </select>
           </div>
 
@@ -165,5 +164,23 @@
 
   </div>
 </div>
-
+<script>
+  var remMonths = <%=remainingMonths%>;
+  var stDate = <%=foundUser.startDate.getMonth()%>;
+  var pkg = <%=foundUser.package%>;
+  console.log(remMonths);
+  console.log(stDate+pkg );
+  console.log((remMonths)/(pkg)*100);
+  if((remMonths/(pkg)*100)>=75){
+    document.querySelector(".status-bar").style.background="green";
+  }
+  if((remMonths/(pkg)*100)>=45 && (remMonths/(pkg)*100)<75 ){
+    document.querySelector(".status-bar").style.background="#79d70f";
+  }
+  if((remMonths/(pkg)*100)>=25 && (remMonths/(pkg)*100)<45 ){
+    document.querySelector(".status-bar").style.background="#ffd31d";
+  }
+document.getElementById("package").value=<%=foundUser.package%>
+document.getElementById("type").value=<%=foundUser.type%>
+</script>
 <%- include("partials/footer"); -%>
