@@ -1,8 +1,4 @@
-//mongod atlas   username - Admin-shray
-//               password - projectgym
-// heroku        id - projrctfirstgym@gmail
-//               password - project1@
-//heroku app name  - warm-headland-44525
+
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
