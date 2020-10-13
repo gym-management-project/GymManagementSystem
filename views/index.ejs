@@ -1,2 +1,338 @@
-<%- include("partials/header"); -%>
-<%- include("partials/footer"); -%>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <title></title>
+</head>
+
+<body>
+    <div class="logo"><img src="/images/barbell.png" alt="logo-image"></div>
+    <div class="content">
+        <h1 class="heading">
+            Make your work easy with our gym manager
+        </h1>
+        <div class="info-btn">
+            <a class="info b1" href="/about"><button>About</button></a>
+            <a class="info b2" href="/contactus"><button>Contact Us</button></a>
+        </div>
+   </div>
+  
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+ <div class="container">
+      <div class="background">
+          <img class="button-image" src="/images/button-image.png" alt="mobile-mockup-image">
+          <div class="anchor-buttons">
+                <a class="anchor-btn b1" href="/register"><button class="h1">Register</button></a>
+                <a class="anchor-btn b2" href="/login"><button class="h2">Login</button></a>
+          </div>
+      </div>
+ </div>
+ <div class="bottom-transparent"></div>
+  
+ <div class="bottom-black"> 
+    <h1>hello</h1>
+</div>
+  <img class="back-image" src="/images/desktop-back-image.png" alt="index-page-bottom-image">
+  
+  <div class="bottom">
+   
+        <img class="bottom-image" src="/images/Component 2.svg" alt="index-page-bottom-image">
+        <img class="mobile-image" src="/images/Component 5.png" alt="index-page-bottom-image">
+    
+   
+  </div>
+
+  <style>
+      *{
+        margin: 0;
+      }
+    body {
+      background-color: #000;
+      background-image: none;
+      background-size: auto;
+     font-family: "Roboto" ,san-serif;
+    }
+
+    .content{
+        z-index: 20;
+        position: absolute;
+        width: 40%;
+        top : 200px;
+        left: 100px;
+    }
+    .heading{
+        color: white;
+        margin-bottom: 30px;
+        font-family: "Roboto" san-serif;
+        font-size: 4rem;
+        font-weight: 900;
+    }
+    .info-btn {
+        margin: auto;
+        height: 80px;
+    }
+    .info{
+        margin: auto;
+    }
+    .info button{
+        width: 130px;
+        height: 40px;
+        border : 2px white solid;
+        color: white;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+    .info button:hover{
+        cursor: pointer;
+        background-color: white;
+        color : black;
+
+    }
+    .b1{
+        margin-right: 20px;
+    }
+    .logo img{
+        position: fixed;
+        width : 70px;
+        top : 30px;
+        left: 100px;
+        z-index: 20;
+    }
+     .container{
+         width: 100%;
+         z-index: 10;
+         margin-top: 100px;
+     }
+     .background{
+         z-index: 15;
+         width: 100%;
+         position: relative;
+     }
+     .button-image{
+         width : 250px;
+         position: absolute;
+         right : 10%;
+     }
+     .anchor-buttons{
+        position: absolute;
+        z-index: 18;
+        right : 12%;
+        bottom: -470px;
+     }
+     .h1{
+        color : #8b0000;
+     }
+     .h1:hover{
+         color: red;
+         text-shadow : 0 1px 1px  red;
+     }
+     .h2{
+        color :#174d47;
+     }
+     .h2:hover{
+         color: #39b23a;
+         text-shadow : 0 1px 1px  #39b23a;
+     }
+
+     .anchor-btn button{
+        background-color: #e5e5e5;
+        font-size: medium;
+        z-index: 20;
+        width: 80px;
+        height: 30px;
+        border : none;
+        border-radius: 20px;
+        }
+        .anchor-btn button:hover{
+            cursor: pointer;
+            background-color: white;
+        }
+    .back-image{
+        width : 482px;
+        z-index: 20;
+        bottom :50px;
+        left : 20%;
+        position: fixed;
+        display: inline;
+
+    }
+    .mobile-image{
+        display: none;
+    }
+    .bottom-image {
+      width: 103%;
+      left: 0;
+      position: fixed;
+      bottom: 0;
+      z-index: 10;
+      display: inline;
+    }
+ .bottom-black,.bottom-transparent{
+     display: none;
+ }
+
+    @keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+
+.stars, .twinkling{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+
+@media ( max-width: 1200px){
+    .logo img{
+        left  : 60px;
+    }
+    .content {
+        top : 120px;
+        left: 60px;
+    }
+    .heading{
+        margin: 0;
+    }
+    .info-btn{
+        margin-top: 20px;
+    }
+    .back-image{
+        width :380px;
+        bottom:40px;
+    }
+}
+@media (max-width :750px){
+    .stars , .twinkling{
+        display: none;
+    }
+    .content,.button-image,.logo img,.back-image{
+        position: static;
+    } 
+        .logo{
+            padding-top: 0;
+            position: fixed;
+            background-color: #000;
+            width: 100%;
+            margin-bottom: 40px;
+            z-index: 40;
+        } 
+        .logo img{
+            width  : 70px;
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        .content{
+            width: 85%;
+            margin: auto;
+            padding-top: 150px;
+            text-align: center;
+        }
+        .heading{
+         padding-bottom: 30px;
+          font-size: 3rem;
+        }
+        .container{
+            margin-top: 30px;
+            height: 600px;
+            display: block;
+        }
+        .background{
+            width: 80%;
+            margin: auto;
+            position: relative;
+        }
+        .button-image{
+            display: block;
+            margin: auto;
+            width: 200px;
+        }
+        .anchor-buttons{
+            position: absolute;
+            display: block;
+            bottom:0;
+            left:34%;
+            height: 50px;
+            z-index: 20;
+            width: 40%;
+        }
+        .bottom-black{
+            display: block;
+            position: fixed;
+            bottom: 0;
+            z-index: 20;
+            width: 100%;
+            height: 250px;
+            background-color: #000;
+        }
+        .bottom-transparent{
+            display: block;
+           height: 80px;
+            width: 100%;
+        }
+        .bottom-image{
+          width: 1000px;
+          z-index: 30;
+        }
+        .back-image{
+            display: none;
+        }
+        
+        .mobile-image{
+        width : 200px;
+        z-index: 40;
+        bottom :50px;
+        left : 30%;
+        position: fixed;
+        display: inline;
+
+    }
+    }
+
+
+
+
+ 
+  </style>
+</body>
+
+</html>
