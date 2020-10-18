@@ -4,7 +4,8 @@
 <div class="form form-info">
 <div class="status-bar">
 
-  <p class="status-content"><%=remainingMonths%> Months,<%=remainingDays%> Days remaining.</p>
+  <p class="status-content"></p>
+  
 </div>
   <button type="button" name="edit" id="editButton" onclick="return editButton()"><i class="fas fa-user-edit"></i></button>
   <div class="form-container">
@@ -18,48 +19,48 @@
             <img class="profile-image-userInfo" src="data:foundUser/<%=foundUser.profilepic.contentType%>;base64,<%=foundUser.profilepic.data.toString('base64')%>" alt="profile-pic">
           </div>
           <div class="gymId">
-            <h4>GYM ID : <span><%=foundUser._id%></span></h4>
+             <h4>GYM ID : <span><%=foundUser._id%></span></h4>
           </div>
 
         </div>
         <div class="col-auto">
           <div class="form-row">
             <div class="col-auto">
-              <label for="inline">First name</label>
-              <input type="text" name="fname" class="form-control" id="inline" value="<%=foundUser.fname%>" disabled required autocomplete="on">
+              <label for="inline1">First name</label>
+              <input type="text" name="fname" class="form-control" id="inline1" value="<%=foundUser.fname%>" disabled required autocomplete="on">
             </div>
             <div class="col-auto colright">
-              <label for="inline">Last name</label>
-              <input type="text" name="lname" class="form-control" id="inline"  value="<%=foundUser.lname%>" disabled required autocomplete="on">
+              <label for="inline2">Last name</label>
+              <input type="text" name="lname" class="form-control" id="inline2"  value="<%=foundUser.lname%>" disabled required autocomplete="on">
             </div>
           </div>
           <div class="form-row">
             <div class="col-auto">
-              <label for="inline">Phone Number</label>
-              <input type="tel" name="pnum1" class="form-control" value="<%=foundUser.pnum1%>" id="inline" disabled required autocomplete="on">
+              <label for="inline4">Phone Number</label>
+              <input type="tel" name="pnum1" class="form-control" value="<%=foundUser.pnum1%>" id="inline3" disabled required autocomplete="on">
             </div>
             <div class="col-auto colright">
-              <label for="inline">second Phone Number</label>
-              <input type="tel" name="pnum2" class="form-control" value="<%=foundUser.pnum2%>" id="inline" disabled autocomplete="on">
+              <label for="inline3">second Phone Number</label>
+              <input type="tel" name="pnum2" class="form-control" value="<%=foundUser.pnum2%>" id="inline4" disabled autocomplete="on">
             </div>
           </div>
 
           <div class="form-row">
             <div class="col-auto">
-              <label for="inline">House No.</label>
-              <input type="text" name="hno" class="form-control" value="<%=foundUser.hno%>" id="inline"  disabled required autocomplete="on">
+              <label for="inline5">House No.</label>
+              <input type="text" name="hno" class="form-control" value="<%=foundUser.hno%>" id="inline5"  disabled required autocomplete="on">
             </div>
             <div class="col-auto">
-              <label for="inline">City</label>
-              <input type="text" name="city" class="form-control" value="<%=foundUser.city%>" id="inline"  disabled required autocomplete="on">
+              <label for="inline6">City</label>
+              <input type="text" name="city" class="form-control" value="<%=foundUser.city%>" id="inline6"  disabled required autocomplete="on">
             </div>
           </div>
         </div>
       </div>
       <div class="form-row">
         <div class="col">
-          <label for="inline">D.O.B</label>
-          <input type="date" name="dob" class="form-control" id="inline" value="<%=foundUser.dob%>" disabled required autocomplete="on">
+          <label for="inline7">D.O.B</label>
+          <input type="date" name="dob" class="form-control" id="inline7" value="<%=foundUser.dob%>" disabled required autocomplete="on">
         </div>
       </div>
       <div class="form-row">
@@ -77,46 +78,46 @@
       </div>
       <div class="form-row">
         <div class="col">
-          <label for="inline">email</label>
-          <input type="email" name="email" class="form-control" id="inline"  disabled value="<%=foundUser.email%>" required autocomplete="on">
+          <label for="inline8">email</label>
+          <input type="email" name="email" class="form-control" id="inline8"  disabled value="<%=foundUser.username%>" required autocomplete="on">
         </div>
       </div>
 
       <div class="form-row">
         <div class="col-auto">
-          <label for="inline">Family member name</label>
-          <input type="text" name="famName" class="form-control" value="<%=foundUser.famName%>"  disabled id="inline" required autocomplete="on">
+          <label for="inline9">Family member name</label>
+          <input type="text" name="famName" class="form-control" value="<%=foundUser.famName%>"  disabled id="inline9" required autocomplete="on">
         </div>
         <div class="col-auto">
-          <label for="inline">Relation</label>
-          <input type="text" name="relation" class="form-control"  disabled value="<%=foundUser.relation%>" id="inline" required autocomplete="on">
+          <label for="inline10">Relation</label>
+          <input type="text" name="relation" class="form-control"  disabled value="<%=foundUser.relation%>" id="inline10" required autocomplete="on">
         </div>
         <div class="col-auto colright">
-          <label for="inline"> phone number</label>
-          <input type="tel" name="famPnum" class="form-control" value="<%=foundUser.famPnum%>"  disabled id="inline" autocomplete="on">
+          <label for="inline11"> phone number</label>
+          <input type="tel" name="famPnum" class="form-control" value="<%=foundUser.famPnum%>"  disabled id="inline12" autocomplete="on">
         </div>
       </div>
 
       <div class="form-row">
         <div class="col-auto">
 
-          <label for="inline">
+          <label for="inline13">
             Bone Injury
           </label>
-          <input type="text" name="boneInjury" value="<%=foundUser.boneInjury%>"  disabled id="inline" class="form-control" required autocomplete="on">
+          <input type="text" name="boneInjury" value="<%=foundUser.boneInjury%>"  disabled id="inline14" class="form-control" required autocomplete="on">
         </div>
       </div>
       <div class="form-row">
         <div class="col">
-          <label for="inline">Any disease ?</label>
-          <textarea name="disease" class="form-control" id="inline" value="<%=foundUser.disease%>" autocomplete="on" disabled></textarea>
+          <label for="inline15">Any disease ?</label>
+          <textarea name="disease" class="form-control" id="inline15" value="<%=foundUser.disease%>" autocomplete="on" disabled></textarea>
         </div>
       </div>
-  
+
       <div class="form-row">
         <div class="col-auto">
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Package</label>
+            <label for="package">Package</label>
             <select name="package" class="form-control" id="package"  value="<%=foundUser.package%>" disabled>
 
               <option value ="1">1 month</option>
@@ -130,7 +131,7 @@
         <div class="col-auto">
 
           <div class="form-group">
-            <label for="exampleFormControlSelect1">type</label>
+            <label for="type">type</label>
             <select name="type" class="form-control" id="type"  value="<%=foundUser.type%>" disabled>
 
               <option value="1">Aerobics</option>
@@ -145,8 +146,8 @@
       </div>
       <div class="form-row">
         <div class="col">
-          <label for="inline">Starting Date</label>
-          <input type="date" name="startDate" class="form-control" id="inline" value="<%=foundUser.startDate%>" disabled required autocomplete="on">
+          <label for="inline16">Starting Date</label>
+          <input type="date" name="startDate" class="form-control" id="inline16" value="" disabled required autocomplete="on">
         </div>
       </div>
 
@@ -160,27 +161,12 @@
       </div>
 
     </form>
+   <input type="text" style="display: none;" class="enDate" value="<%=endingDate%>" >
+   <input type="text" style="display: none;" class="stDate" value="<%=foundUser.startDate%>" >
+   <input type="text" style="display: none;" class="pkg" value="<%=foundUser.package%>" >
 
-
+    
   </div>
 </div>
-<script>
-  var remMonths = <%=remainingMonths%>;
-  var stDate = <%=foundUser.startDate.getMonth()%>;
-  var pkg = <%=foundUser.package%>;
-  console.log(remMonths);
-  console.log(stDate+pkg );
-  console.log((remMonths)/(pkg)*100);
-  if((remMonths/(pkg)*100)>=75){
-    document.querySelector(".status-bar").style.background="green";
-  }
-  if((remMonths/(pkg)*100)>=45 && (remMonths/(pkg)*100)<75 ){
-    document.querySelector(".status-bar").style.background="#79d70f";
-  }
-  if((remMonths/(pkg)*100)>=25 && (remMonths/(pkg)*100)<45 ){
-    document.querySelector(".status-bar").style.background="#ffd31d";
-  }
-document.getElementById("package").value=<%=foundUser.package%>
-document.getElementById("type").value=<%=foundUser.type%>
-</script>
+<script src="/scripts/userInfoStatus.js"></script>
 <%- include("partials/footer"); -%>

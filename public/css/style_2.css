@@ -210,7 +210,7 @@ button{
 .social-media ul li{
   display: inline-block;
   cursor: pointer;
-  margin: 25px 15px;
+  margin:auto;
 }
 
 .social-media img{

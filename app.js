@@ -32,7 +32,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/user/calculator",
+    callbackURL: "http://localhost:3000/auth/google/subscriptions",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 
   },
@@ -45,17 +45,6 @@ passport.use(new GoogleStrategy({
   }
 ));
 
-passport.use(new FacebookStrategy({
-  clientID: process.env.FACEBOOK_CLIENT_ID,
-  clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-  callbackURL: "http://localhost:3000/auth/facebook/user/calculator"
-},
-function(accessToken, refreshToken, profile, cb) {
-  User.findOrCreate({ facebookId: profile.id }, function (err, user) {
-    return cb(err, user);
-  });
-}
-));
 //conection to database
 
 mongoose.connect("mongodb+srv://Admin-shary:projectgym@cluster0.gul6g.mongodb.net/subscriberDB", {
@@ -66,10 +55,15 @@ mongoose.set("useCreateIndex", true);
 
 //schema
 
+const adminSchema = new mongoose.Schema({
+  username : String,
+  password : String,
+  googleId : String
+})
+
 const userSchema = new mongoose.Schema({
   password: String,
   googleId: String,
-  facebookID : String,
   fname: String,
   lname: String,
   pnum1: Number,
@@ -98,6 +92,7 @@ userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
 const User = mongoose.model("User", userSchema);
+const Admin = mongoose.model("Admin",adminSchema)
 
 passport.use(User.createStrategy());
 passport.serializeUser(function(user, done) {
@@ -133,25 +128,16 @@ app.get("/auth/google",
   passport.authenticate("google", {
     scope: ["profile"]
   }));
-  app.get('/auth/facebook',
-  passport.authenticate('facebook',{
-    scope : ["email"]
-  }));
+ 
 
-  app.get('/auth/google/user/calculator',
+  app.get('/auth/google/subscriptions',
   passport.authenticate('google', {
-    failureRedirect: '/login'
+    failureRedirect: '/login',
   }),
   function(req, res) {
+     
     // Successful authentication, redirect home.
-    res.redirect('/user/calculator');
-  });
-
-  app.get('/auth/facebook/user/calculator',
-  passport.authenticate('facebook', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/user/calculator');
+    res.redirect('/subscriptions');
   });
 
 app.get("/login", (req, res) => {
@@ -171,7 +157,7 @@ app.post("/login", (req, res) => {
       res.redirect("/login");
     } else {
       passport.authenticate("local")(req, res, function() {
-        res.redirect("/user/calculator")
+            res.redirect("subscriptions");
       });
     }
   });
@@ -186,14 +172,14 @@ app.post("/register", (req, res) => {
       res.redirect("/register");
     } else {
       passport.authenticate("local")(req, res, function() {
-        res.redirect("/user/calculator");
+        res.redirect("subscriptions");
       });
     }
   });
 });
 app.get("/logout", (req, res) => {
   req.logout();
-  res.redirect("/login");
+  res.redirect("/");
 })
 app.get("/subscriptions", (req, res) => {
   if (req.isAuthenticated()) {
@@ -218,21 +204,32 @@ app.get("/subscriptions/:id", (req, res) => {
       _id: req.params.id
     }, (err, foundUser) => {
       if (foundUser) {
+          
+        var startingDateMonth = foundUser.startDate.getMonth();
+        var startingDateDay = foundUser.startDate.getDate();
+      
+        var startingDate =foundUser.startDate;
+        var startingDateYear = foundUser.startDate.getFullYear();
+        var endingDateYear = startingDateYear;
+        var pack = foundUser.package;
+        var endingDateMonth = startingDateMonth+ foundUser.package;
+     
+        if(endingDateMonth === 12){
+            endingDateMonth=12;
+        }
+        else {
+            endingDateMonth = endingDateMonth%12;
 
-        var dateToday = new Date();
-        monthToday = dateToday.getMonth();
-        var endDate = foundUser.package + foundUser.startDate.getMonth();
-
-        var remainingMonths = Math.floor(endDate - monthToday) - 1;
-        var remainingDays = (30 * (foundUser.package) - dateToday.getDate()) % 30;
-        //
-        // if(remainingMonths<=0 && remainingDays==)
-
-
+        }
+        
+         if((startingDateMonth + foundUser.package)>12 ){
+          endingDateYear=endingDateYear+1;
+         }
+        const endingDate = new Date(endingDateYear,endingDateMonth,startingDateDay);
+         console.log(endingDate);
         res.render("userInfo", {
           foundUser: foundUser,
-          remainingMonths: remainingMonths,
-          remainingDays: remainingDays
+           endingDate : endingDate
         });
       } else {
         console.log(err);
@@ -241,7 +238,7 @@ app.get("/subscriptions/:id", (req, res) => {
   } else {
     res.redirect("/login");
   }
-
+   
 });
 app.post("/subscriptions/:id", (req, res) => {
   if (req.isAuthenticated()) {

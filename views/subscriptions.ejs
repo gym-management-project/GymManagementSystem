@@ -56,12 +56,15 @@
            </div>
          </div>
        </div>
-       <div class="percentage-bar row-container row">
+       <div class="percentage-bar-container">
 
        </div>
      </div>
    </a>
-<%});}%>
+   <input type="text" style="display: none;" class="pkg" value="<%=user.package%>">
+   <input type="text" style="display: none;" class="startingDate" value="<%=user.startDate%>">
+   <script src="/scripts/percentageBar.js"></script>
+   <%});}%>
 
 
 <%- include("partials/footer"); -%>

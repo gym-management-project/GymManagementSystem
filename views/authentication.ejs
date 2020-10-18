@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>login - Gym Manager </title>
+	<title>get started - Gym Manager </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/css/style_2.css">
@@ -11,7 +11,7 @@
 <body>
     <div class="header">
         <label class="logo" >
-            <img src="images/barbell.png" alt="no logo">
+          <a href="/"><img src="/images/barbell.png" alt="no logo"></a>
         </label>
         <nav class="nav" id="navbar">
             <a href="" class="home">Home</a>
@@ -38,12 +38,7 @@
           <button class="submit" type="submit">Sign In</button>
           <p class="forgot-pass">Forgot Password ?</p>
 
-          <div class="social-media">
-            <ul>
-              <li><a href="/auth/facebook"><img src="images/facebook.png"></a></li>
-              <li><a href="/auth/google"><img src="images/google.svg"></a><li>
-            </ul>
-          </div>
+          
           </form>
         </div>
 
@@ -52,10 +47,20 @@
             <div class="img-text m-up">
               <h2>New here?</h2>
               <p>Sign up and discover great amount of new opportunities!</p>
+              <div class="social-media">
+            <ul>
+              <li><a href="/auth/google"><img src="images/google.svg"></a><li>
+            </ul>
+          </div>
             </div>
             <div class="img-text m-in">
               <h2>One of us?</h2>
               <p>If you already has an account, just sign in. We've missed you!</p>
+              <div class="social-media">
+            <ul>
+              <li><a href="/auth/google"><img src="images/google.svg"></a><li>
+            </ul>
+          </div>
             </div>
             <div class="img-btn">
               <span class="m-up">Sign Up</span>
@@ -82,20 +87,14 @@
                 <input type="password" id="confirm_password" name="confirm_password">
               </label>
               <button type="submit" class="submit">Sign Up Now</button>
-              <div class="social-media">
-                <ul>
-                  <li><a href="/auth/facebook"><img src="images/facebook.png"></a></li>
-                  <li><a href="/auth/google"><img src="images/google.svg"></a><li>
-                </ul>
-              </div>
             </form>
-            
+
           </div>
         </div>
       </div>
   </section>
 
 
-
-
+<script src="/scripts/validation.js"></script>
+<script src="/scripts/login.js"></script>
 <%- include("partials/footer"); -%>
