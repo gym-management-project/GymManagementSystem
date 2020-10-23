@@ -1,4 +1,41 @@
-<%- include("partials/headerManagement"); -%>
+
+<html>
+	<head>
+	   <title>admin - Gym Data</title>
+	   <link rel="stylesheet" type="text/css" href="/css/nav.css">
+	   <link rel="stylesheet" type="text/css" href="/css/calculator.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/images/barbell.png">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		 <script src="https://kit.fontawesome.com/89e8994d62.js" crossorigin="anonymous"></script>
+	
+	</head>
+	<body style ="background-color: #c4c4c4;">
+	   <div class="header">
+		  <label class="logo" >
+			  <img src="/images/barbell.png" alt="no logo">
+		  </label>
+		  <nav class="nav" id="navbar">
+			<div class="links">
+			  <a href="/subscriptions" class="Subscription">Subscription</a>
+			  <a href="/addusers" class="adduserIcon"><i class="fas fa-user-plus  nav-icons"></i></a>
+			 <a href="/logout">logout</a>
+			</div>
+			<div class="icons">
+			  <input type="text" id="search_input" placeholder="Search user">
+			  <i id="cross" class="fas fa-times nav-icons"></i> 
+			  <i class="fas fa-search nav-icons" id="search_bar"></i>
+				  <a href="/user/calculator" class="Subscription "><i class="fas fa-calculator nav-icons" ></i></a>
+			  
+			</div>
+			<div class="menu_bar">
+			  <i class="fas fa-bars"></i>
+			</div>
+	  
+		  </nav>
+		</div>
+	
 
 <div class="buttons">
 	<button id="btn" class="choose" onClick="showcal()"> Calorie Calculator </button>
