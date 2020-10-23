@@ -121,7 +121,7 @@ const upload = multer({
 
 app.get("/", (req, res) => {
   if (req.isAuthenticated()) {
-    res.render("calculators");
+    res.render("subscriptions");
   } else {
     res.render("index");
   }
