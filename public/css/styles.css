@@ -6,12 +6,9 @@
 }
 
 body {
-
-  background-image: url("/images/Component 1.svg");
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-color: #fef4eb;
+  background-image: cover;
 }
 
  .header1 {
@@ -88,8 +85,9 @@ section {
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
 }
 
+
 label {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .user-details {
@@ -192,14 +190,24 @@ label {
   -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
-}
+  transition: width 0.5s,height 0.5s,padding-top 0.5s;
 
+}
+.row-container{
+  display: flex;
+  padding-top: 5px;
+}
 .user-card:hover {
-  -webkit-box-shadow: 0 7px 12px 0 rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 7px 12px 0 rgba(0, 0, 0, 0.24);
-  box-shadow: 0 7px 12px 0 rgba(0, 0, 0, 0.24);
-}
 
+  width: 87%;
+  height: 210px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.50);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.50);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.50);
+}
+.user-card:hover{
+ padding-top: 10px;
+}
 .row {
   margin-top: 20px;
 }
@@ -409,6 +417,11 @@ label {
   }
 
   /*subscription*/
+  .row-container{
+    padding-top: 20px;
+    display: block;
+  
+  }
   .col-sm-6 {
     text-align: center;
   }
@@ -421,6 +434,9 @@ label {
   .user-card {
     height: 500px;
     width: 85%;
+  }
+  .user-card:hover {
+    height: 520px;
   }
 
   .db-status {

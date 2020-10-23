@@ -1,6 +1,7 @@
-var package = document.querySelector(".pkg").value ; 
+  var package = document.querySelector(".pkg").value ; 
   var startingDate = new Date(document.querySelector(".stDate").value);
   var endingDate = new Date(document.querySelector(".enDate").value);
+ 
   var todayDate = new Date();
   console.log("Starting date = "+startingDate.getDate()+"-"+(startingDate.getMonth()+1)+"-"+startingDate.getFullYear());
   console.log("today date = "+todayDate.getDate()+"-"+(todayDate.getMonth()+1)+"-"+todayDate.getFullYear());
@@ -25,8 +26,8 @@ var package = document.querySelector(".pkg").value ;
 
     document.querySelector(".status-bar").style.backgroundColor="#79d70f";
   }
-  console.log(remainingMonths);
-  console,console.log(remainingDays);
+  console.log("remaining months = "+ remainingMonths);
+  console.log("remaining Days = " +remainingDays);
   if( todayDate.getFullYear() < startingDate.getFullYear()) {
     document.querySelector(".status-content").innerHTML="Session not started Yet";
     document.querySelector(".status-bar").style.background="green";
@@ -38,7 +39,13 @@ var package = document.querySelector(".pkg").value ;
   
   else{
     if(remainingMonths > 1){
-      document.querySelector(".status-content").innerHTML=remainingMonths-1+" Months ," + remainingDays +" Days remaining";
+      if(remainingDays>=30){
+        document.querySelector(".status-content").innerHTML=remainingMonths+" Months ," + (remainingDays-30) +" Days remaining";
+      }
+      else{
+        document.querySelector(".status-content").innerHTML=remainingMonths-1+" Months ," + remainingDays +" Days remaining";
+      }
+      
     }
     if(remainingMonths ===1){
       document.querySelector(".status-content").innerHTML=30+startingDate.getDate()-todayDate.getDate() + " Days remaining";

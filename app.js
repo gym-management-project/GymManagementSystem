@@ -14,6 +14,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const FacebookStrategy = require("passport-facebook").Strategy;
+const endDateUpdated = require(__dirname+"/public/scripts/timeRem.js")
 const app = express();
 
 app.set("view engine", "ejs");
@@ -86,6 +87,7 @@ const userSchema = new mongoose.Schema({
   package: Number,
   type: String,
   startDate: Date,
+  endingDate : Date
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -188,7 +190,6 @@ app.get("/subscriptions", (req, res) => {
         $ne: null
       }
     }, (err, users) => {
-      console.log(users.length);
       res.render("subscriptions", {
         users: users,
       });
@@ -204,32 +205,35 @@ app.get("/subscriptions/:id", (req, res) => {
       _id: req.params.id
     }, (err, foundUser) => {
       if (foundUser) {
-          
-        var startingDateMonth = foundUser.startDate.getMonth();
-        var startingDateDay = foundUser.startDate.getDate();
+          console.log("while rendering userinfo ending date " +foundUser.endingDate);
+        // var startingDateMonth = foundUser.startDate.getMonth();
+        // var startingDateDay = foundUser.startDate.getDate();
       
-        var startingDate =foundUser.startDate;
-        var startingDateYear = foundUser.startDate.getFullYear();
-        var endingDateYear = startingDateYear;
-        var pack = foundUser.package;
-        var endingDateMonth = startingDateMonth+ foundUser.package;
+        // var startingDate =foundUser.startDate;
+        // var startingDateYear = foundUser.startDate.getFullYear();
+        // var endingDateYear = startingDateYear;
+        // var pack = foundUser.package;
+        // var endingDateMonth = startingDateMonth+ foundUser.package;
      
-        if(endingDateMonth === 12){
-            endingDateMonth=12;
-        }
-        else {
-            endingDateMonth = endingDateMonth%12;
+        // if(endingDateMonth === 12){
+        //     endingDateMonth=12;
+        // }
+        // else {
+        //     endingDateMonth = endingDateMonth%12;
 
-        }
+        // }
         
-         if((startingDateMonth + foundUser.package)>12 ){
-          endingDateYear=endingDateYear+1;
-         }
-        const endingDate = new Date(endingDateYear,endingDateMonth,startingDateDay);
-         console.log(endingDate);
+        //  if((startingDateMonth + foundUser.package)>12 ){
+        //   endingDateYear=endingDateYear+1;
+        //  }
+        // const endingDate = new Date(endingDateYear,endingDateMonth,startingDateDay);
+
+        // console.log("start date  => "+startingDate);
+        // console.log("package => "+pack);
+        // console.log("ending date =>"+endingDate );
+        // const endingDate = endDateUpdated.endDate(foundUser.startDate,foundUser.package);
         res.render("userInfo", {
-          foundUser: foundUser,
-           endingDate : endingDate
+          foundUser: foundUser
         });
       } else {
         console.log(err);
@@ -243,10 +247,19 @@ app.get("/subscriptions/:id", (req, res) => {
 app.post("/subscriptions/:id", (req, res) => {
   if (req.isAuthenticated()) {
     const id = req.params.id;
-    User.update({
+    console.log("while update userinfo");
+     var stDateUpdated =req.body.startDate+"";
+     stDateUpdated = stDateUpdated.replace("-",",");
+     stDateUpdated = stDateUpdated.replace("-",","); 
+  
+     const packageUpdated =parseInt(req.body.package,10);
+     const endingDateUpdated = endDateUpdated.endDate(stDateUpdated,packageUpdated);
+    console.log("updated found user ending date : "+endingDateUpdated);
+    User.updateOne({
       _id: id
     }, {
-      $set: req.body
+      $set: req.body,
+    endingDate : endingDateUpdated
     }, (err) => {
       if (!err) {
         res.redirect("/subscriptions");
@@ -287,8 +300,37 @@ app.get("/addusers", (req, res) => {
   }
 
 });
+
 app.post("/addusers", upload, (req, res, next) => {
+  console.log(req.body.startDate);
+  
   if (req.isAuthenticated()) {
+    var stDate = req.body.startDate+"";
+    stDate = stDate.replace("-",",");
+    stDate = stDate.replace("-",",");
+    var startingDate = new Date(stDate);
+    var startingDateMonth = startingDate.getMonth();
+    var startingDateDay = startingDate.getDate();
+    var startingDateYear = startingDate.getFullYear();
+    var endingDateYear = startingDateYear;
+    var pack = parseInt(req.body.package,10);
+    var endingDateMonth = startingDateMonth +pack ;
+      console.log(endingDateMonth);
+    if(endingDateMonth === 12){
+        endingDateMonth=12;
+    }
+    else {
+        endingDateMonth = endingDateMonth%12;
+
+    }
+
+    if((startingDateMonth + pack)>12 ){
+      endingDateYear=endingDateYear+1;
+    }
+
+    const endingDate = new Date(endingDateYear,endingDateMonth,startingDateDay);
+    console.log(endingDate);
+
     const user = new User({
       fname: _.capitalize(req.body.fname),
       lname: _.capitalize(req.body.lname),
@@ -308,9 +350,10 @@ app.post("/addusers", upload, (req, res, next) => {
       famPnum: req.body.famPnum,
       boneIngury: req.body.boneInjury,
       disease: req.body.disease,
-      package: req.body.package,
+      package: pack,
       type: req.body.type,
-      startDate: req.body.startDate
+      startDate: req.body.startDate,
+      endingDate : endingDate
     });
     user.save((err) => {
       if (err) {
