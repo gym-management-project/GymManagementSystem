@@ -10,6 +10,9 @@ body {
   background-position: bottom;
   background-image: cover;
 }
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
 
  /* .header1 {
   margin: 20px;
@@ -49,7 +52,17 @@ body {
   left: 0;
   
 }
-
+.icons,.links{
+  margin: auto;
+  color: black;
+  margin-bottom: 5px;
+}
+.links a:hover{
+     border-bottom: 2px solid black ;
+}
+.adduserIcon:hover{
+    border-bottom: none ;
+}
 
 .logo img {
   height: 7vh;
@@ -59,7 +72,15 @@ body {
   padding-right: 0px;
   display: none;
   height: 2.5vh;
-
+  border: none;
+  border-bottom: 1px solid black;
+  background: none ;
+  text-align: center;
+}
+.nav-icons ,.links a{
+  font-size: 1.5rem;
+  color: black;
+  margin-right: 8px;
 }
 
 #search_bar{
@@ -79,8 +100,8 @@ body {
   margin-bottom: -5px;
 }
 
-.menu_bar img{
-  height: 2.5vh;
+.menu_bar {
+  font-size: 1.5rem;
   margin-bottom: -5px;
 }
 
@@ -101,14 +122,12 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
-  padding-right: 12px;
 
 }
 
 .nav .icons {
   display: flex;
   padding-right: 10px;
-  color: blue ;
 }
 
 .nav .menu_bar {
@@ -116,11 +135,6 @@ body {
 }
 
 
-
-
-.nav a:hover {
-  color: blue;
-}
 
 /*footer */
 footer {
@@ -478,15 +492,20 @@ label {
     right: 0;
     margin-top: 40px;
     z-index: 999;
-    background-color : rgba(248, 71, 210, 0.9);
+    background-color : rgba(2, 2, 2, 0.9);
     text-align: center;
     width: 150px;
+   
   }
 
-  .nav .links a {
+
+  .nav .links a , .links a i{
     display: block;
+    color : white;
     align-items: center;
+    margin-top: 10px;
   }
+
   .nav .menu_bar {
     display: inline-block;
   }
