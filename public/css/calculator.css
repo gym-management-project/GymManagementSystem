@@ -10,7 +10,9 @@ body {
 .box{
   margin-top: 30px;
 }
-
+input:focus, textarea:focus, select:focus,button:focus{
+  outline: none;
+}
 .header1 {
   margin: 20px;
   background-color: white;

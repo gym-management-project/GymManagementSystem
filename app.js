@@ -383,11 +383,14 @@ app.get("/user/calculator", (req, res) => {
     res.redirect("/login");
   }
 });
-
 let port = process.env.PORT;
+
 if (port == null || port == "") {
   port = 3000;
+ 
 }
+
+
 
 
 app.listen(port, () => {

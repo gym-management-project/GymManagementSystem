@@ -10,7 +10,7 @@ body {
   background-position: bottom;
   background-image: cover;
 }
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus,button:focus{
   outline: none;
 }
 
