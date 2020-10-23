@@ -10,21 +10,26 @@
      <script src="https://kit.fontawesome.com/89e8994d62.js" crossorigin="anonymous"></script>
 
 </head>
-<body style ="background-color: #e5e5e5;">
-<div class = "header1">
-   <label class="logo" >
-    <a href="/"><img src="/images/barbell.png" alt="no logo"></a>
-   </label>
-   <nav>
-       <ul class="nav-bar">
-           <li><a href="/subscriptions" >Subscriptions</a></li>
-           <li><a href="/addusers"><i class="fas fa-user-plus"></i></a></li>
-           <li><form action="/subscriptions" method="post"  style="display :inline-block;">
-             <input id="serchName" class="" type="text" placeholder="Enter Name"></input></li>
-              <button type ="submit">search</button></li>
-              <li><a href="/logout">logout</a></li>
-           </form>
-           <li>
-         </ul>
-   </nav>
-</div>
+<body style ="background-color: #0f0808;">
+   <div class="header">
+      <label class="logo" >
+          <img src="/images/barbell.png" alt="no logo">
+      </label>
+      <nav class="nav" id="navbar">
+        <div class="links">
+          <a href="/subscriptions" class="Subscription">Subscription</a>
+              <a href="/logout">logout</a>
+        </div>
+        <div class="icons">
+          <input type="text" id="search_input" placeholder=" Search address">
+          <img src="/images/cross.svg" id="cross">
+          <img src="/images/search.png" id="search_bar" >
+              <a href="/user/calculator" class="Subscription"><i class="fas fa-calculator"></i></a>
+          <a href="/addusers"><i class="fas fa-user-plus adduser"></i></a>
+        </div>
+        <div class="menu_bar">
+          <img src="/images/menu.svg">
+        </div>
+  
+      </nav>
+    </div>
