@@ -24,11 +24,14 @@
     <div class="twinkling"></div>
  <div class="container">
       <div class="background">
-          <img class="button-image" src="/images/button-image.png" alt="mobile-mockup-image">
-          <div class="anchor-buttons">
+          <div class=image-container> <img class="button-image" src="/images/button-image.png" alt="mobile-mockup-image">
+            <div class="anchor-buttons">
                 <a class="anchor-btn b1" href="/register"><button class="h1">Register</button></a>
                 <a class="anchor-btn b2" href="/login"><button class="h2">Login</button></a>
           </div>
+        </div>
+         
+         
       </div>
  </div>
  <div class="bottom-transparent"></div>
@@ -92,9 +95,7 @@
         color : black;
 
     }
-    .b1{
-        margin-right: 20px;
-    }
+ 
     .logo img{
         position: fixed;
         width : 70px;
@@ -112,16 +113,27 @@
          width: 100%;
          position: relative;
      }
+     .image-container{
+         width: 250px;
+         height: 497px;
+         margin: auto;
+         position: relative;
+         float: right;
+         margin-right: 50px;
+     }
      .button-image{
          width : 250px;
          position: absolute;
-         right : 10%;
+         
      }
      .anchor-buttons{
         position: absolute;
         z-index: 18;
-        right : 12%;
-        bottom: -470px;
+        width: 100%;
+        bottom: 20px;
+        justify-content: space-around;
+        display: flex;
+
      }
      .h1{
         color : #8b0000;
@@ -279,7 +291,14 @@
         .background{
             width: 80%;
             margin: auto;
+            display: flex;
+            justify-content: space-around;
             position: relative;
+        }
+        .image-container{
+            width: 200px;
+            height :397px;
+            margin: auto;
         }
         .button-image{
             display: block;
@@ -287,13 +306,9 @@
             width: 200px;
         }
         .anchor-buttons{
-            position: absolute;
-            display: block;
+            width: 100%;
             bottom:0;
-            left:34%;
             height: 50px;
-            z-index: 20;
-            width: 40%;
         }
         .bottom-black{
             display: block;
@@ -301,7 +316,7 @@
             bottom: 0;
             z-index: 20;
             width: 100%;
-            height: 250px;
+            height: 240px;
             background-color: #000;
         }
         .bottom-transparent{
@@ -320,16 +335,16 @@
         .mobile-image{
         width : 200px;
         z-index: 40;
-        bottom :50px;
-        left : 30%;
+        bottom :30px;
+        left : 25%;
         position: fixed;
         display: inline;
 
     }
     @media(max-width: 700px){
         .anchor-buttons{
-            width: 80%;
-            left: 19%;
+        
+        
         }
     }
     }

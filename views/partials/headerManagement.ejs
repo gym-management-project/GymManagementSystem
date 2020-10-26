@@ -23,9 +23,13 @@
          <a href="/logout">logout</a>
         </div>
         <div class="icons">
-          <input type="text" id="search_input" placeholder="Search user">
-          <i id="cross" class="fas fa-times nav-icons"></i> 
-          <i class="fas fa-search nav-icons" id="search_bar"></i>
+          <form action="/search" method="POST">
+            <input type="text" id="search_input" placeholder="Search user">
+            <i id="cross" class="fas fa-times nav-icons"></i> 
+            <button type="submit"><i class="fas fa-search nav-icons" id="search_bar"></i></button>
+          </form>
+    
+        
               <a href="/user/calculator" class="Subscription "><i class="fas fa-calculator nav-icons" ></i></a>
           
         </div>

@@ -1,4 +1,4 @@
-
+// https://warm-headland-44525.herokuapp.com/auth/google/subscriptions
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -34,7 +34,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL:  "https://warm-headland-44525.herokuapp.com/auth/google/subscriptions",
+    callbackURL:  "http://localhost:3000/auth/google/subscriptions",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 
   },
@@ -206,32 +206,7 @@ app.get("/subscriptions/:id", (req, res) => {
     }, (err, foundUser) => {
       if (foundUser) {
           console.log("while rendering userinfo ending date " +foundUser.endingDate);
-        // var startingDateMonth = foundUser.startDate.getMonth();
-        // var startingDateDay = foundUser.startDate.getDate();
-      
-        // var startingDate =foundUser.startDate;
-        // var startingDateYear = foundUser.startDate.getFullYear();
-        // var endingDateYear = startingDateYear;
-        // var pack = foundUser.package;
-        // var endingDateMonth = startingDateMonth+ foundUser.package;
-     
-        // if(endingDateMonth === 12){
-        //     endingDateMonth=12;
-        // }
-        // else {
-        //     endingDateMonth = endingDateMonth%12;
 
-        // }
-        
-        //  if((startingDateMonth + foundUser.package)>12 ){
-        //   endingDateYear=endingDateYear+1;
-        //  }
-        // const endingDate = new Date(endingDateYear,endingDateMonth,startingDateDay);
-
-        // console.log("start date  => "+startingDate);
-        // console.log("package => "+pack);
-        // console.log("ending date =>"+endingDate );
-        // const endingDate = endDateUpdated.endDate(foundUser.startDate,foundUser.package);
         res.render("userInfo", {
           foundUser: foundUser
         });
