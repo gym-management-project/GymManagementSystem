@@ -1,19 +1,15 @@
 <%- include("partials/headerManagement"); -%>
 <%if(users.length === 0){console.log(users.length);%>
-
-           <div class="db-status">
-             <p>
-               <i class=" empty-database fas fa-exclamation-triangle"></i>
+            <div class="db-status">
+               <p>
+                  <i class=" empty-database fas fa-exclamation-triangle"></i>
                </p>
-
-                <p class="db-status-info">
+               <p class="db-status-info">
                   No Subscriber Found
-                  </p>
+               </p>
            </div>
-
-
-  <%}else{%>
-   <% users.forEach((user) => {%>
+<%}else{%>
+   <% users.map((user) => {%>
 
    <a class="subs-top-container" href="/subscriptions/<%=user._id%>">
 

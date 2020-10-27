@@ -1,5 +1,6 @@
 var package = document.querySelector(".pkg1").value ; 
 var id1 = document.querySelector(".id1").value ; 
+console.log(id1);
 var startingDate = new Date(document.querySelector(".stDate1").value);
 var endingDate = new Date(document.querySelector(".enDate1").value);
 
@@ -61,7 +62,7 @@ else{
       document.querySelector(".percentage-bar-container"+id1).style.opacity=1;
       console.log("session ended");
     }
-
+console.log(".percentage-bar-container"+id1);
   
 }
 console.log(remainingDays);

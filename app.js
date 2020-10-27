@@ -83,7 +83,6 @@ const userSchema = new mongoose.Schema({
   relation: String,
   famPnum: Number,
   boneInjury: String,
-  disease: String,
   package: Number,
   type: String,
   startDate: Date,
@@ -121,7 +120,7 @@ const upload = multer({
 
 app.get("/", (req, res) => {
   if (req.isAuthenticated()) {
-    res.render("subscriptions");
+    res.redirect("subscriptions");
   } else {
     res.render("index");
   }
@@ -194,6 +193,7 @@ app.get("/subscriptions", (req, res) => {
         users: users,
       });
     });
+   
   } else {
     res.redirect("/login");
   }
@@ -324,7 +324,6 @@ app.post("/addusers", upload, (req, res, next) => {
       relation: req.body.relation,
       famPnum: req.body.famPnum,
       boneIngury: req.body.boneInjury,
-      disease: req.body.disease,
       package: pack,
       type: req.body.type,
       startDate: req.body.startDate,
