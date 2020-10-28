@@ -35,7 +35,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL:  "http://localhost:3000/auth/google/subscriptions",
+    callbackURL:  "https://warm-headland-44525.herokuapp.com/auth/google/subscriptions",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 
   },
