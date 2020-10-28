@@ -1,4 +1,5 @@
 // https://warm-headland-44525.herokuapp.com/auth/google/subscriptions
+// http://localhost:3000/auth/google/subscriptions
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
