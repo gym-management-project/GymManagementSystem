@@ -14,7 +14,6 @@ const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
-const FacebookStrategy = require("passport-facebook").Strategy;
 const endDateUpdated = require(__dirname+"/public/scripts/timeREM.js");
 
 const app = express();

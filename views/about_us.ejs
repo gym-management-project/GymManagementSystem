@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <link rel="stylesheet" type="text/css" href="/css/about.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <div class="header">
         <label class="logo" >
             <img src="/images/barbell.png" alt="no logo">
@@ -97,6 +101,13 @@
             </div>
         </div>
     </section>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(window).on("load",function(){
+	  $(".loader-wrapper").fadeOut("slow");
+	});
+</script>
 
 </body>
 </html>
