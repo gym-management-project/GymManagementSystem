@@ -217,11 +217,11 @@
     height: 30px;
     color: #fff;
     background-color: #272626;
-    margin-left: -60px;
+    
     border: none;
   }
   textarea{
-    margin-left: -60px;
+   
   }
   
   input[type='text'], input[type='email'] { 
