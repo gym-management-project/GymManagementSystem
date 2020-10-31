@@ -366,11 +366,14 @@ app.get("/about",(req,res) =>{
   });
 
 let port = process.env.PORT;
+
 if (port == null || port == "") {
-  port = 3000; 
+  port = 3000;
+ 
 }
 app.post("/search",(req,res)=>{
   const val = req.body.name;
+  console.log(val);
   User.findOne({name :val},(err,foundUser)=>
   {
     if(foundUser){
