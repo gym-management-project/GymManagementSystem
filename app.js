@@ -190,6 +190,7 @@ app.get("/subscriptions", (req, res) => {
         $ne: null
       }
     }, (err, users) => {
+ 
       res.render("subscriptions", {
         users: users,
       });
@@ -372,12 +373,12 @@ if (port == null || port == "") {
  
 }
 app.post("/search",(req,res)=>{
-  const val = req.body.name;
+  const val = _.capitalize(req.body.searchName);
   console.log(val);
-  User.findOne({name :val},(err,foundUser)=>
+  User.find({fname :val},(err,users)=>
   {
-    if(foundUser){
-      res.render("userInfo",{foundUser : foundUser});
+    if(users){
+      res.render("subscriptions",{users : users});
     }
   });
 });
