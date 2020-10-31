@@ -13,6 +13,9 @@
 
 </head>
 <body onresize="changeText()" style="background-color: #c4c4c4;">
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
         <header>
   <div class=navBar>
       <img  class="navBrand"src="/images/barbell.png" alt="">
@@ -31,7 +34,7 @@
               </li>
               <li>
                   <form action="/search" method="POST">
-                      <div class="search-form"><input class="search-input" type="text">
+                      <div class="search-form"><input class="search-input" name="name" type="text">
                           <button  type="submit" class="search-button"><i class="fas fa-search nav-icons" id="search_bar"></i></button>
                       </div>
                   

@@ -5,7 +5,7 @@ const links = document.querySelectorAll(".navlinks  ul li");
 
 hamburger.addEventListener("click",()=>{
     
-
+    document.querySelector("header").style.transition ="all 3s";
     document.querySelector("header").classList.toggle("header-class");
     
 

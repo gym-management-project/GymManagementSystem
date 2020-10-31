@@ -34,7 +34,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL:  "https://warm-headland-44525.herokuapp.com/auth/google/subscriptions",
+    callbackURL:  "http://localhost:3000/auth/google/subscriptions",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 
   },
@@ -67,6 +67,7 @@ const userSchema = new mongoose.Schema({
   googleId: String,
   fname: String,
   lname: String,
+  name: String,
   pnum1: Number,
   pnum2: Number,
   hno: String,
@@ -234,7 +235,8 @@ app.post("/subscriptions/:id", (req, res) => {
       _id: id
     }, {
       $set: req.body,
-    endingDate : endingDateUpdated
+    endingDate : endingDateUpdated,
+    name : req.body.fname+" "+req.body.lname
     }, (err) => {
       if (!err) {
         res.redirect("/subscriptions");
@@ -309,6 +311,7 @@ app.post("/addusers", upload, (req, res, next) => {
     const user = new User({
       fname: _.capitalize(req.body.fname),
       lname: _.capitalize(req.body.lname),
+      name : req.body.fname+" "+ req.body.lname,
       pnum1: req.body.pnum1,
       pnum2: req.body.pnum2,
       hno: req.body.hno,
@@ -363,12 +366,18 @@ app.get("/about",(req,res) =>{
   });
 
 let port = process.env.PORT;
-
 if (port == null || port == "") {
-  port = 3000;
- 
+  port = 3000; 
 }
-
+app.post("/search",(req,res)=>{
+  const val = req.body.name;
+  User.findOne({name :val},(err,foundUser)=>
+  {
+    if(foundUser){
+      res.render("userInfo",{foundUser : foundUser});
+    }
+  });
+});
 
 
 
