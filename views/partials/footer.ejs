@@ -9,44 +9,7 @@
 <script src ="/scripts/cal.js"></script>
 <script src ="/scripts/editUserInfo.js"></script>
 <script src ="/scripts/searchName.js"></script>
-<script>
-    document.querySelector("#search_bar").addEventListener("click",function(){
-	var x=document.getElementById("search_input");
-	var y=document.getElementById("cross");
-	if(x.display="none")
-	{
-		x.style.display="inline";
-		x.focus();
-	}
-	if(y.display="none")
-	{
-		y.style.display="inline";
-	}
-});
+<script src="/scripts/nav.js"></script>
 
-document.querySelector("#cross").addEventListener("click",function(){
-	var x=document.getElementById("search_input");
-	var y=document.getElementById("cross");
-
-		x.style.display="none";
-
-		y.style.display="none";
-
-});
-
-
-document.querySelector(".menu_bar").addEventListener("click",function(){
-  var x=document.querySelector(".links");
-  var z=x.style.display;
-  if(z=="none")
-  {
-    x.style.display="block";
-  }
-  else
-  {
-    x.style.display="none";
-  }
-});
-</script>
 </body>
 </html>

@@ -16,84 +16,6 @@ body{
 input:focus, textarea:focus, select:focus, button:focus{
   outline: none;
 }
-.header {
-  margin: 2vh;
-  background-color: whitesmoke;
-  border-radius: 4vh;
-  height:5%;
-  width:85%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-
-.logo {
-  padding-top: 5px;
-  margin: 0;
-  width: 7vh;
-
-  float: left;
-}
-
-.logo img {
-    height: 7vh;
-}
-
-#search_input {
-  padding-right: 0px;
-  display: none;
-  height: 2.5vh;
-
-}
-
-#search_bar{
-  height: 3vh;
-   margin-bottom: -5px;
-   padding-right: 5px;
-}
-
-#cross{
-  height: 2vh;
-  padding-right: 10px;
-  display: none;
-}
-
-.adduser img {
-  height: 3vh;
-  margin-bottom: -5px;
-}
-
-.nav {
-  display: flex;
-  padding-right: 15px;
-
-}
-
-.nav a {
-  color: #24292e;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-  padding-right: 12px;
-
-}
-
-.nav .icon {
-  display:none;
-  padding-right: 15px;
-  color: blue ;
-}
-
-
-
-
-.nav a:hover {
-  color: blue;
-}
 
 
 
@@ -102,7 +24,9 @@ section {
   justify-content: center;
   align-items: center;
   font-family: 'Nunito', sans-serif;
-  padding-top: 30px;
+ 
+
+  padding-top: 10%;
 }
 
 input, button{

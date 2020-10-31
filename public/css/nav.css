@@ -1,144 +1,227 @@
-.logo {
-    padding: 0px 0px;
+*{
     margin: 0;
-    width: 7vh;
-    float: left;
-  }
-  
-  
-  .header {
-    margin: 2vh auto;
-    background-color: whitesmoke;
-    border-radius: 4vh;
-    height:5%;
-    width:85%; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 999;
-    right: 0;
-    left: 0;
-    
-  }
-  .icons,.links{
-    margin: auto;
-    color: black;
-    margin-bottom: 5px;
-  }
-  .links a:hover{
-       border-bottom: 2px solid black ;
-  }
-  .adduserIcon:hover{
-      border-bottom: none ;
-  }
-  
-  .logo img {
-    height: 7vh;
-  }
-  
-  #search_input {
-    padding-right: 0px;
-    display: none;
-    height: 2.5vh;
-    border: none;
-    border-bottom: 1px solid black;
-    background: none ;
-    text-align: center;
-  }
-  .nav-icons ,.links a{
-    font-size: 1.5rem;
-    color: black;
-    margin-right: 8px;
-  }
-  
-  #search_bar{
-    height: 3vh;
-     margin-bottom: -5px;
-     padding-right: 5px;
-  }
-  
-  #cross{
-    height: 2vh;
-    padding-right: 10px;
-    display: none;
-  }
-  
-  .adduser img {
-    height: 3vh;
-    margin-bottom: -5px;
-  }
-  
-  .menu_bar {
-    font-size: 1.5rem;
-    margin-bottom: -5px;
-  }
-  
-  
-  .nav {
-    display: flex;
-    padding-right: 15px;
-  
-  }
-  
-  .nav .links {
-    display: flex;
-  }
-  
-  
-  .nav .links a {
-    color: #24292e;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-  
-  }
-  
-  .nav .icons {
-    display: flex;
-    padding-right: 10px;
-  }
-  
-  .nav .menu_bar {
-    display: none;
-  }
-@media (max-width : 700px){
-    /*nav-bar*/
-  .header {
-    height: 1.5vh auto;
-    border-radius: 6vh;
-    height:4%;
-    width:92%;
-  }
+    box-sizing: border-box;
+}
+body{
+    background-color: #c4c4c4;
+    scroll-behavior: smooth;
+}
 
-  .nav .links {
-    position: fixed;
-    display: none;
-    right: 0;
-    margin-top: 40px;
-    z-index: 999;
-    background-color : rgba(2, 2, 2, 0.9);
-    text-align: center;
-    width: 150px;
-   
-  }
-
-
-  .nav .links a , .links a i{
-    display: block;
-    color : white;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  .nav .menu_bar {
+nav{
     display: inline-block;
-  }
+}
 
+.navBar{
+    display: flex;
+    justify-content: flex-end;
+    width: 85%;
+    height:60px;
+    margin: auto;
+    margin-top: 30px;
+    background-color :white;
+    border-radius : 35px;
+}
+.navBrand {
+   display: inline;
+    margin-left:-20px;
+   width: 80px;
+   height: 80px;
+  margin-top: -20px;
+
+}
+
+.hamburger{
+    display:none;
+}
+nav{
+    display: flex;
+}
+.navlinks{
+    z-index: 100;
+    display: inline-block;
+    margin: auto;
+}
+nav ul {
+    z-index: 100;
+   margin-top: auto;
+  
+   display: flex;
+   margin-left:auto ;
+   height: 50px;
+   align-items: right;
+   list-style: none;
+}
+nav ul li{
+    z-index: 100;
+    display: inline;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+}
+nav ul li a{
+    z-index: 100;
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 400;
+    color : black;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.search-input{
+    z-index: 100;
+    border: none;
+    border-bottom: 2px solid black ;
+    height: 30px;
+    font-size: 1rem;
+    color: #6b6a6a;
+}
+
+
+.nl:hover{
+   border-bottom: 2px solid black;
+}
+.search-button{
+    z-index: 100;
+    background-color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.adduser-icon{
+    font-size: 1.5rem;
+}
+
+@media (max-width : 850px){
+    .navBar{
+        height: 50px;
+        position: relative;
+    }
+    .navBrand{
+        height: 70px;
+        width: 70px;
+        position: absolute;
+        left: 0;
+    }
+    .hamburger{
+        width : 30px;
+        height: 30px;
+        margin: auto;
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        right: 0;
+        margin-right: 20px;
+       cursor: pointer;
+    }
+    nav{
+        
+        width: 100%;
+        position: relative;
+    }
+    .line{
+        margin: auto;
+        width: 30px;
+        height: 4px;
+        background-color :black;
+    }
+    .navlinks{
+        width: 100%;
+        z-index: 100;
+       
+    }
+    .navlinks ul{
+        z-index: 100;
+        margin-top: 60px;
+        flex-direction: column;
+        justify-content:space-between;
+        background-color: white ;
+        height: 135px;
+        width: 100%;
+        padding: 0;
+        border: 2px solid #adadad;
+        border-radius: 10px;
+        clip-path: circle(0px at 90% 10%);
+        -webkit-clip-path : circle(0px at 90% 10%);
+        transition:all 1s ease-out;
+    }
+    .navlinks ul.open{
+        clip-path: circle(1500px at 90% 10%);
+        -webkit-clip-path : circle(1500px at 90% 10%);
+    }
+    header.header-class{
+        height: 200px;
+        transition: all 2s ease;
+    }
+    .navlinks ul li {
+        z-index: 101;
+        display: block;
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #adadad;
+        color : white;
+        display: inline-block;
+        text-align: center;
+    }
+    .navlinks ul li a , form{
+        margin: auto;
+        margin-right: auto;
  
-
-  .logo img {
-    height: 5.5vh;
-    margin-bottom: -5px;
-    margin-left: -12px;
-  }  
-}  
+    }
+    .search-input{
+        border :none;
+        background-color: #eaeaea;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+       
+    }
+    .search-button{
+        border-left: 1px solid #adadad;
+        background-color: #eaeaea;
+        height: 100%;
+        margin:0;
+       width: 30px;
+    }
+    .search-form{
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+         align-items: center;
+    }
+    form{
+        display: block;
+        height: 100%;
+    }
+    .navlinks ul li {
+        opacity: 0;
+    }
+    .navlinks ul li:nth-child(1){
+       transition: all 0.5s ease 0.4s;
+    }
+    .navlinks ul li:nth-child(2) ,a{
+        transition: all 0.5s ease 0.4s;
+     }
+     .navlinks ul li:nth-child(3) ,a{
+        transition: all 1s ease 0.4s;
+     }
+     .navlinks ul li:nth-child(4) a{
+        transition: all 1.2s ease 0.4s;
+     }
+     .navlinks ul li:nth-child(5) ,a{
+        transition: all 1.2s ease 0.4s;
+     }
+     .navlinks ul li.fade{
+         opacity : 1;
+     }
+     .change{
+        font-size: 1.2rem;
+     }
+     .nl:hover{
+        border: none;
+        
+        background-color: black;
+     }
+     .nl:hover a{
+         color: white;
+     }
+}

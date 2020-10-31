@@ -12,36 +12,38 @@
      <script src="https://kit.fontawesome.com/89e8994d62.js" crossorigin="anonymous"></script>
 
 </head>
-<body style ="background-color: #c4c4c4;">
-  <div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>
-</div>
-
-   <div class="header">
-      <label class="logo" >
-          <img src="/images/barbell.png" alt="no logo">
-      </label>
-      <nav class="nav" id="navbar">
-        <div class="links">
-          <a href="/subscriptions" class="Subscription">Subscription</a>
-          <a href="/addusers" class="adduserIcon"><i class="fas fa-user-plus  nav-icons"></i></a>
-         <a href="/logout">logout</a>
-        </div>
-        <div class="icons">
-          <form action="/search" method="POST">
-            <input type="text" id="search_input" placeholder="Search user">
-            <i id="cross" class="fas fa-times nav-icons"></i> 
-            <button type="submit"><i class="fas fa-search nav-icons" id="search_bar"></i></button>
-          </form>
-    
+<body onresize="changeText()" style="background-color: #c4c4c4;">
+        <header>
+  <div class=navBar>
+      <img  class="navBrand"src="/images/barbell.png" alt="">
+      <nav>
         
-              <a href="/user/calculator" class="Subscription "><i class="fas fa-calculator nav-icons" ></i></a>
+              
           
-        </div>
-        <div class="menu_bar">
-          <i class="fas fa-bars"></i>
-        </div>
-  
+          <div class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </div>
+          <div class="navlinks"><ul>
+              <li  class="nl">
+                  <a href="/subscriptions">subscriptions</a>
+              </li>
+              <li>
+                  <form action="/search" method="POST">
+                      <div class="search-form"><input class="search-input" type="text">
+                          <button  type="submit" class="search-button"><i class="fas fa-search nav-icons" id="search_bar"></i></button>
+                      </div>
+                  
+                  </form>
+              </li>
+              <li >
+                  <a href="/addusers"  class="adduser-icon"><i class="fas fa-user-plus  nav-icons"></i></a>
+              </li>
+              <li class="nl"><a href="/logout" >logout</a></li>
+          </ul></div>
+          
       </nav>
-    </div>
+  </div>
+</header>
   
