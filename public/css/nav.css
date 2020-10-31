@@ -99,6 +99,7 @@ nav ul li a{
         height: 70px;
         width: 70px;
         position: absolute;
+        top:10px;
         left: 0;
     }
     .hamburger{
