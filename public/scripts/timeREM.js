@@ -2,14 +2,12 @@
 function (stDate,package){
  
     var startingDate = new Date(stDate);
-    console.log(startingDate);
     const startingDateMonthUpdated = startingDate.getMonth();
     const startingDateDayUpdated = startingDate.getDate();
     const startingDateYearUpdated = startingDate.getFullYear();
     const pack = parseInt(package,10);
     let endingDateYearUpdated = startingDateYearUpdated;
     let endingDateMonthUpdated = startingDateMonthUpdated+pack +0;
-      console.log("endingDateUpdatedMonth = " + endingDateMonthUpdated);
       if(endingDateMonthUpdated>12){
         endingDateMonthUpdated = endingDateMonthUpdated%12;
         endingDateYearUpdated=endingDateYearUpdated+1;

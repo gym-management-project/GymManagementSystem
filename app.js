@@ -67,7 +67,6 @@ const userSchema = new mongoose.Schema({
   googleId: String,
   fname: String,
   lname: String,
-  name: String,
   pnum1: Number,
   pnum2: Number,
   hno: String,
@@ -307,12 +306,11 @@ app.post("/addusers", upload, (req, res, next) => {
     }
 
     const endingDate = new Date(endingDateYear,endingDateMonth,startingDateDay);
-    console.log(endingDate);
+   
 
     const user = new User({
       fname: _.capitalize(req.body.fname),
       lname: _.capitalize(req.body.lname),
-      name : req.body.fname+" "+ req.body.lname,
       pnum1: req.body.pnum1,
       pnum2: req.body.pnum2,
       hno: req.body.hno,
@@ -374,7 +372,6 @@ if (port == null || port == "") {
 }
 app.post("/search",(req,res)=>{
   const val = _.capitalize(req.body.searchName);
-  console.log(val);
   User.find({fname :val},(err,users)=>
   {
     if(users){

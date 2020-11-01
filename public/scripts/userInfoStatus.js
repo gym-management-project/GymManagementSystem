@@ -3,10 +3,6 @@
   var endingDate = new Date(document.querySelector(".enDate").value);
  
   var todayDate = new Date();
-  console.log("Starting date = "+startingDate.getDate()+"-"+(startingDate.getMonth()+1)+"-"+startingDate.getFullYear());
-  console.log("today date = "+todayDate.getDate()+"-"+(todayDate.getMonth()+1)+"-"+todayDate.getFullYear());
-  console.log("ending date = "+endingDate.getDate()+"-"+(endingDate.getMonth()+1)+"-"+endingDate.getFullYear());
-  console.log(package);
   var remainingMonths = endingDate.getMonth() - todayDate.getMonth();
   if(endingDate.getFullYear()>startingDate.getFullYear()){
     remainingMonths=remainingMonths+12;
@@ -26,8 +22,6 @@
 
     document.querySelector(".status-bar").style.backgroundColor="#79d70f";
   }
-  console.log("remaining months = "+ remainingMonths);
-  console.log("remaining Days = " +remainingDays);
   if( todayDate.getFullYear() < startingDate.getFullYear()) {
     document.querySelector(".status-content").innerHTML="Session not started Yet";
     document.querySelector(".status-bar").style.background="green";
@@ -63,7 +57,6 @@
   
     
   }
- console.log(remainingDays);
 
   
 
