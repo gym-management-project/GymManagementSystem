@@ -9,8 +9,13 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+  <div class="header">
+   <a class="logo-a"href="/"><img class="logo" src="/images/barbell.png" alt="logo-img"></a> 
+  </div>
+  <div class="header-bottom"></div>
+  <div class="desktop-view">
   <section>
+   
     <div class="cont">
         <div class="form sign-in">
           <form action="/login" method="POST">
@@ -80,9 +85,31 @@
           </div>
         </div>
       </div>
+    
   </section>
+</div>
+<div class="mobile-view">
+    <div class="mob-cont">
+    
+          <form action="/login" method="POST">
+            <h2>Sign In</h2>
+            <label>
+              <span>Email Address</span>
+              <input type="email" name="username" required>
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" name="password" required>
+            </label>
+            <button class="submit" type="submit">Sign In</button>
+          </form>
 
+    </div>
+</div>
+<div class="header-bottom"></div>
+<div class="footer">
 
+</div>
 <script src="/scripts/validation.js"></script>
 <script src="/scripts/login.js"></script>
 <%- include("partials/footer"); -%>
