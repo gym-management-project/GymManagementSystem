@@ -1,8 +1,9 @@
   var package = document.querySelector(".pkg").value ; 
   var startingDate = new Date(document.querySelector(".stDate").value);
   var endingDate = new Date(document.querySelector(".enDate").value);
- 
   var todayDate = new Date();
+  
+  
   var remainingMonths = endingDate.getMonth() - todayDate.getMonth();
   if(endingDate.getFullYear()>startingDate.getFullYear()){
     remainingMonths=remainingMonths+12;
@@ -57,6 +58,3 @@
   
     
   }
-
-  
-
