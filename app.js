@@ -34,7 +34,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL:  "https://warm-headland-44525.herokuapp.com/auth/google/subscriptions",
+    callbackURL:   "https://warm-headland-44525.herokuapp.com/auth/google/subscriptions",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 
   },
@@ -184,16 +184,17 @@ app.get("/logout", (req, res) => {
 })
 app.get("/subscriptions", (req, res) => {
   if (req.isAuthenticated()) {
-    User.find({
+    User
+    User.find(  {
       "fname": {
         $ne: null
-      }
-    }, (err, users) => {
+        }
+    } ,(err, users) => {
  
       res.render("subscriptions", {
         users: users,
       });
-    });
+    }).sort({endingDate : 'asc'});
    
   } else {
     res.redirect("/login");
@@ -377,7 +378,7 @@ app.post("/search",(req,res)=>{
     if(users){
       res.render("subscriptions",{users : users});
     }
-  });
+  }).sort({endingDate : 'asc'});
 });
 
 
