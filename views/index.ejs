@@ -5,413 +5,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/css/loading.css">
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
   <script src="https://kit.fontawesome.com/89e8994d62.js" crossorigin="anonymous"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <title></title>
 </head>
 
 <body>
-    <div class="loader-wrapper">
-        <span class="loader"><span class="loader-inner"></span></span>
-    </div>
-    <div class="logo"><img src="/images/barbell.png" alt="logo-image"></div>
-    <section id="about">
-    <div class="content">
-        <h1 class="heading">
-            Make your work easy with our gym manager
-        </h1>
-        <div class="info-btn">
-            <a class="info b1" href="/about"><button>About</button></a>
-            <a class="info b2" href="/about"><button>Contact Us</button></a>
+    <header>
+        <div class=navBar>
+            <img  class="navBrand"src="/images/barbell.png" alt="">
+            <nav>
+             <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="navlinks"><ul>
+                    <li  class="nl">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="nl">
+                        <a href="/about_us">About</a>
+                    </li>
+                    <li  class="nl">
+                        <a href="/contact_us">Contact</a>
+                    </li>
+                    <li class="nl"><a href="#" ><i class="fab fa-github"></i></a></li>
+                </ul></div>
+                
+            </nav>
         </div>
-   </div>
-</section>
-     <div class="scroll-button" ><a href="#login">login <i class="fas fa-chevron-right"></i></a></div>
-    <div class="stars"></div>
-    <div class="twinkling"></div>
-    <section id="login">
- <div class="container">
-      <div class="background">
-          <div class=image-container> <img class="button-image" src="/images/button-image.png" alt="mobile-mockup-image">
-            <div class="anchor-buttons">
-                <a class="anchor-btn b1" href="/register"><button class="h1">Register</button></a>
-                <a class="anchor-btn b2" href="/login"><button class="h2">Login</button></a>
-          </div>
+      </header>
+
+<div class="content">
+    <div class="row">
+          <div class="col-lf">
+              <h1 class="heading">Make your work easy with our Gym manager</h1>
+              <a class="div-sign-in"href="/login"><div class="sign-in">
+                  <div class="white-line-1"></div>
+                  <div class="white-line-2"></div>
+                  <div class="white-line-3"></div>
+                  <p class="login-t">LOGIN</p>
+              </div></a>
         </div>
-         
-         
-      </div>
- </div>
-</section>
- <div class="bottom-transparent"></div>
-  
- <div class="bottom-black"> 
-    <h1>hello</h1>
+          <div class="col-rg"><img  class="index-img"src="/images/index1.png" alt=""></div>
 </div>
-  <img class="back-image" src="/images/desktop-back-image.png" alt="index-page-bottom-image">
+</div>
+<div class="vertical-bar">
+    <div class="circle home-circle"></div>
+    <div class="circle about-circle"></div>
+    <div class="circle contact-circle"></div>
+</div>
+<div class="footer">
   
-  <div class="bottom">
-   
-        <img class="bottom-image" src="/images/Component 2.svg" alt="index-page-bottom-image">
-        <img class="mobile-image" src="/images/Component 5.png" alt="index-page-bottom-image">
-    
-   
-  </div>
-
-  <style>
-      *{
-        margin: 0;
-      }
-      html{
-        scroll-behavior: smooth;
-      }
-    body {
-        
-      background-color: #000;
-      background-image: none;
-      background-size: auto;
-     font-family: "Roboto" ,san-serif;
-    }
-    .scroll-button {
-        display: none;
-    }
-        .logo{
-            height: 80px;
-            width: 100%;
-        }
-    .content{
-        z-index: 20;
-        position: absolute;
-        width: 40%;
-        top : 200px;
-        left: 100px;
-    }
-    .heading{
-        color: white;
-        margin-bottom: 30px;
-        font-family: "Roboto" san-serif;
-        font-size: 4rem;
-        font-weight: 900;
-    }
-    .info-btn {
-        margin: auto;
-        height: 80px;
-    }
-    .info{
-        margin: auto;
-    }
-    .info button{
-        width: 130px;
-        height: 40px;
-        border : 2px white solid;
-        color: white;
-        border-radius: 5px;
-        background-color: transparent;
-    }
-    .info button:hover{
-        cursor: pointer;
-        background-color: white;
-        color : black;
-
-    }
- 
-    .logo img{
-        position: fixed;
-        width : 70px;
-        top : 30px;
-        left: 100px;
-        z-index: 20;
-    }
-     .container{
-         width: 100%;
-         z-index: 10;
-         margin-top: 100px;
-     }
-     .background{
-         z-index: 15;
-         width: 100%;
-         position: relative;
-     }
-     .image-container{
-         width: 250px;
-         height: 497px;
-         margin: auto;
-         position: relative;
-         float: right;
-         margin-right: 50px;
-     }
-     .button-image{
-         width : 250px;
-         position: absolute;
-         
-     }
-     .anchor-buttons{
-        position: absolute;
-        z-index: 18;
-        width: 100%;
-        bottom: 20px;
-        justify-content: space-around;
-        display: flex;
-
-     }
-     .h1{
-        color : #8b0000;
-     }
-     .h1:hover{
-         color: red;
-         text-shadow : 0 1px 1px  red;
-     }
-     .h2{
-        color :#174d47;
-     }
-     .h2:hover{
-         color: #39b23a;
-         text-shadow : 0 1px 1px  #39b23a;
-     }
-
-     .anchor-btn button{
-        background-color: #e5e5e5;
-        font-size: medium;
-        z-index: 20;
-        width: 80px;
-        height: 30px;
-        border : none;
-        border-radius: 20px;
-        }
-        .anchor-btn button:hover{
-            cursor: pointer;
-            background-color: white;
-        }
-    .back-image{
-        width : 482px;
-        z-index: 20;
-        bottom :50px;
-        left : 20%;
-        position: fixed;
-        display: inline;
-
-    }
-    .mobile-image{
-        display: none;
-    }
-    .bottom-image {
-      width: 103%;
-      left: 0;
-      position: fixed;
-      bottom: 0;
-      z-index: 10;
-      display: inline;
-    }
- .bottom-black,.bottom-transparent{
-     display: none;
- }
-
-    @keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
+</div>
 
 
-.stars, .twinkling{
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-}
-
-.stars {
-  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:0;
-}
-
-.twinkling{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-  z-index:1;
-
-  -moz-animation:move-twink-back 200s linear infinite;
-  -ms-animation:move-twink-back 200s linear infinite;
-  -o-animation:move-twink-back 200s linear infinite;
-  -webkit-animation:move-twink-back 200s linear infinite;
-  animation:move-twink-back 200s linear infinite;
-}
-
-
-@media ( max-width: 1200px){
-    .logo img{
-        left  : 60px;
-    }
-    .content {
-        top : 120px;
-        left: 60px;
-    }
-    .heading{
-        margin: 0;
-    }
-    .info-btn{
-        margin-top: 20px;
-    }
-    .back-image{
-        width :380px;
-        bottom:40px;
-    }
-}
-@media (max-width :750px){
-    .stars , .twinkling{
-        display: none;
-    }
-    .content,.button-image,.logo img,.back-image{
-        position: static;
-    } 
-    .scroll-button {
-        display: inline;
-        width : 70px;
-        height : 35px;
-        position :fixed;
-        top : 40%;
-        left : -30px ;
-        z-index: 100;
-        text-align: center;
-        background : linear-gradient( -90deg , #0064E9 , #80D0C8);
-        border-radius : 5px 5px 0 0 ;
-        transform: rotate(90deg);
-        transition: all;
-        transition-delay: 1s;
-        font-size: 1rem;
- }
- .scroll-button a i {
-     margin-top:4px ;
- } 
- .scroll-button a{
-     text-decoration: none;
-     color : white;
- }
-
-        .logo{
-            padding-top: 0;
-            position: fixed;
-            width: 100%;
-            margin-bottom: 20px;
-            z-index: 40;
-            background-color: black;
-        } 
-        .logo img{
-            width: 50px;
-            margin-top: 20px;
-            margin-left: 30px;
-            margin-bottom: 20px;
-        }
-        .content{
-            width: 85%;
-            margin: auto;
-            padding-top: 170px;
-            text-align: center;
-        }
-        .heading{
-         padding-bottom: 30px;
-          font-size: 3rem;
-        }
-        .container{
-            margin-top: 30px;
-            height: 600px;
-            display: block;
-        }
-        .background{
-            width: 80%;
-            margin: auto;
-            display: flex;
-            justify-content: space-around;
-            position: relative;
-        }
-        .image-container{
-            width: 170px;
-            height :347px;
-            margin: auto;
-        }
-        .button-image{
-            display: block;
-            margin: auto;
-            width: 170px;
-        }
-        .anchor-buttons{
-            width: 100%;
-            bottom:-3px;
-            height: 50px;
-        }
-        .anchor-btn button {
-            width: 70px;
-        }
-        .bottom-black{
-            display: block;
-            position: fixed;
-            bottom: 0;
-            z-index: 20;
-            width: 100%;
-            height: 160px;
-            background-color: #000;
-        }
-       
-        .bottom-image{
-          width: 1000px;
-          z-index: 30;
-        }
-        .back-image{
-            display: none;
-        }
-        
-        .mobile-image{
-        width : 150px;
-        z-index: 40;
-        bottom :10px;
-        left : 25%;
-        position: fixed;
-        display: inline;
-
-    }
-    }
-
-
-
-
- 
-  </style>
-  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-	$(window).on("load",function(){
-      $(".loader-wrapper").fadeOut("slow");
-	});
-    window.onscroll = () =>{
-        if(window.scrollY<200){
-            document.querySelector(".scroll-button").innerHTML="<a href='#login'>login <i class='fas fa-chevron-right'></i></a>";
-        }
-        else{
-            document.querySelector(".scroll-button").innerHTML="<a href='#about'><i class='fas fa-chevron-left'></i> about</a>"
-        }
-      
-    }
-    
-      
-       
-  
-    
-</script>
-</body>
-
+ </body>
 </html>
