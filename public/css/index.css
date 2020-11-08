@@ -25,8 +25,8 @@ nav{
 }
 .navBrand {
    display: inline;
-left: 0;
-top : -10px;
+   left: 0;
+   top : -10px;
    width: 80px;
    height: 80px;
 
@@ -88,6 +88,8 @@ nav ul li a:hover{
 }
 .index-img{
   width: 100%;
+  margin-top:auto ;
+  margin-bottom: auto;
 }
 .content{
     margin-top: 50px;
@@ -98,8 +100,11 @@ nav ul li a:hover{
     margin: auto;
     display: flex;
 }
-.col-lf,.col-rg{
+.col-lf{
     display: inline-block;
+}
+.col-rg{
+    display:  flex;
 }
 .col-lf{
     width: 45%;
@@ -112,7 +117,7 @@ nav ul li a:hover{
     color:whitesmoke;
     margin-top:20%;
     font-size: 5rem;
-    margin-bottom:30px;
+    margin-bottom:50px;
 }
 .div-sign-in{
     text-decoration: none;
@@ -163,7 +168,7 @@ nav ul li a:hover{
 
 .footer{
     
-    height: 2px;
+    height: 140px;
     width: 85%;
    border-top:1px solid #433954;
    margin: auto;
@@ -185,7 +190,24 @@ nav ul li a:hover{
     border-radius: 100%;
     margin: auto;
 }
-
+.copyright{
+    text-align: center;
+    margin-top: 10px;
+    color: #4f4362;
+}
+.navlinks ul.open{
+    clip-path: circle(1500px at 90% 10%);
+    -webkit-clip-path : circle(1500px at 90% 10%);
+}
+header.header-class{
+    height: 200px;
+  
+}
+@media(max-width : 1000px){
+    .heading{
+        font-size: 4rem;
+    }
+}
 @media (max-width : 850px){
     .navBar{
         height: 50px;
@@ -194,9 +216,7 @@ nav ul li a:hover{
     .navBrand{
         height: 70px;
         width: 70px;
-        position: absolute;
-        top:10px;
-        left: 0;
+         
     }
     .hamburger{
         width : 30px;
@@ -206,9 +226,10 @@ nav ul li a:hover{
         flex-flow: column;
         position: absolute;
         right: 0;
-        margin-top: 3px;
+        margin-top: 10px;
         margin-right: 5px;
        cursor: pointer;
+       
     }
     nav{
         
@@ -219,12 +240,12 @@ nav ul li a:hover{
         margin: auto;
         width: 30px;
         height: 4px;
-        background-color :black;
+        background-color :white;
+        border-radius: 5px;
     }
     .navlinks{
         width: 100%;
         z-index: 100;
-       
     }
     .navlinks ul{
         z-index: 100;
@@ -237,9 +258,14 @@ nav ul li a:hover{
         padding: 0;
         border: 2px solid #adadad;
         border-radius: 10px;
+        clip-path: circle(0px at 90% 10%);
+        -webkit-clip-path : circle(0px at 90% 10%);
  
     }
-  
+    .navlinks ul.open{
+        clip-path: circle(1500px at 90% 10%);
+        -webkit-clip-path : circle(1500px at 90% 10%);
+    }
     header.header-class{
         height: 200px;
       
@@ -254,13 +280,12 @@ nav ul li a:hover{
         display: inline-block;
         text-align: center;
     }
-    .navlinks ul li a , form{
+    .navlinks ul li a {
         margin: auto;
         margin-right: auto;
  
     }
-
-
+    
     .navlinks ul li {
         opacity: 0;
     }
@@ -279,8 +304,72 @@ nav ul li a:hover{
      .nl:hover a{
          color: white;
      }
+     .vertical{
+         display: flex;
+     }
+     .vertical-bar{
+        margin: auto;
+         transform: rotate(0deg);
+         position: static ;
+       
+     }
+     .heading{
+         font-size: 3.5rem;
+         text-align: center;
+     }
+     .row{
+         display: inline-block;
+         margin: auto;
+     }
      .index-img{
+         width: 80%;
+         margin: auto;
+     }
+     .col-rg{
+         display: flex;
+     }
+     .content{
+         margin-top: 20px;
+         display: flex;
+            margin-bottom: 20px;
+     }
+     .col-lf{
+         display:block;
          width: 100%;
      }
-}
+     .col-rg{
+         
+         width: 100%;
+     }
+     .div-sign-in{
+        margin : auto;
 
+    }
+    .sign{
+        display: flex;
+        width: 100%;
+    }
+    .sign-in{
+        width: 120px;
+        height: 40px;
+    }
+}
+@media(max-width:400px){
+    .heading {
+        font-size: 3rem;
+        text-align: center;
+    }
+   .navBrand{
+       width: 60px;
+       height: 60px;
+       top:-5px;
+   }
+    .white-line-1,.white-line-2{
+        top : 5px;
+    }
+    .white-line-3{
+        bottom: 5px;
+    }
+
+    
+}

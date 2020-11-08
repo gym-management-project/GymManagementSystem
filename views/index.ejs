@@ -38,29 +38,57 @@
             </nav>
         </div>
       </header>
+
+ <!-- content      -->
 <div class="content">
     <div class="row">
           <div class="col-lf">
-              <h1 class="heading">Make your work easy with our Gym manager</h1>
-              <a class="div-sign-in"href="/login"><div class="sign-in">
+              
+            <h1 class="heading">Make your work easy with our Gym manager</h1>
+            <div class="sign">
+            <a class="div-sign-in"href="/login"><div class="sign-in">
                   <div class="white-line-1"></div>
                   <div class="white-line-2"></div>
                   <div class="white-line-3"></div>
                   <p class="login-t">LOGIN</p>
               </div></a>
+            </div>
         </div>
           <div class="col-rg"><img  class="index-img"src="/images/index1.png" alt=""></div>
 </div>
 </div>
+<div class="vertical">
 <div class="vertical-bar">
     <div class="circle home-circle"></div>
     <div class="circle about-circle"></div>
     <div class="circle contact-circle"></div>
 </div>
-<div class="footer">
-  
 </div>
+<div class="footer">
+    <p class="copyright">
+       All rights reserved &#169;
+        <span class="current-year"></span>
+      </p>
+</div>
+<script>
+    var date = new Date();
+    const hamburger = document.querySelector(".hamburger");
+    const navlinks = document.querySelector(".navlinks ul");
+    const links = document.querySelectorAll(".navlinks  ul li");
+    document.querySelector(".current-year").innerHTML=date.getFullYear();
 
+    hamburger.addEventListener("click",()=>{
+    
+    document.querySelector("header").style.transition ="all 3s";
+    document.querySelector("header").classList.toggle("header-class");
+    
+
+    navlinks.classList.toggle("open");
+    links.forEach(link =>{
+        link.classList.toggle("fade");
+    });
+});
+</script>
 
  </body>
 </html>
