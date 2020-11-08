@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/barbell.png">
+  <title>Gym Manager</title>
   <link rel="stylesheet" type="text/css" href="/css/loading.css">
   <link rel="stylesheet" type="text/css" href="/css/index.css">
   <script src="https://kit.fontawesome.com/89e8994d62.js" crossorigin="anonymous"></script>
@@ -17,23 +19,25 @@
         <div class=navBar>
             <img  class="navBrand"src="/images/barbell.png" alt="">
             <nav>
-             <div class="hamburger">
+                <div class="hamburger">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div class="navlinks"><ul>
-                    <li  class="nl">
-                        <a href="/">Home</a>
-                    </li>
-                    <li class="nl">
-                        <a href="/about_us">About</a>
-                    </li>
-                    <li  class="nl">
-                        <a href="/contact_us">Contact</a>
-                    </li>
-                    <li class="nl"><a href="#" ><i class="fab fa-github"></i></a></li>
-                </ul></div>
+                <div class="navlinks">
+                    <ul>
+                        <li  class="nl">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nl">
+                            <a href="/about">About</a>
+                        </li>
+                        <li  class="nl">
+                            <a href="/contact_us">Contact</a>
+                        </li>
+                        <li class="nl"><a href="#" class="contribute" ><i class="fab fa-github"></i></a></li>
+                    </ul>
+               </div>
                 
             </nav>
         </div>
@@ -72,21 +76,20 @@
 </div>
 <script>
     var date = new Date();
+    document.querySelector(".current-year").innerHTML=date.getFullYear();
     const hamburger = document.querySelector(".hamburger");
     const navlinks = document.querySelector(".navlinks ul");
     const links = document.querySelectorAll(".navlinks  ul li");
-    document.querySelector(".current-year").innerHTML=date.getFullYear();
+    const contribute = document.querySelector(".contribute");
 
     hamburger.addEventListener("click",()=>{
-    
     document.querySelector("header").style.transition ="all 3s";
-    document.querySelector("header").classList.toggle("header-class");
-    
-
+    document.querySelector(".navlinks").classList.toggle("navlinks-add");
     navlinks.classList.toggle("open");
     links.forEach(link =>{
         link.classList.toggle("fade");
     });
+   
 });
 </script>
 
