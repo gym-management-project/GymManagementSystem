@@ -20,6 +20,9 @@ nav{
     margin-top: 30px;
     background-color :white;
     border-radius : 35px;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.24);
 }
 .navBrand {
    display: inline;

@@ -1,4 +1,4 @@
-// https://warm-headland-44525.herokuapp.com/auth/google/subscriptions
+// https://manager-gym.herokuapp.com/auth/google/subscriptions
 // http://localhost:3000/auth/google/subscriptions
 require('dotenv').config();
 const express = require("express");
@@ -34,7 +34,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL:   "https://warm-headland-44525.herokuapp.com/auth/google/subscriptions",
+    callbackURL:   "https://manager-gym.herokuapp.com/auth/google/subscriptions",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 
   },
@@ -56,11 +56,11 @@ mongoose.connect("mongodb+srv://Admin-shary:projectgym@cluster0.gul6g.mongodb.ne
 mongoose.set("useCreateIndex", true);
 
 //schema
-const adminSchema = new mongoose.Schema({
-  username : String,
-  password : String,
-  googleId : String
-})
+// const adminSchema = new mongoose.Schema({
+//   username : String,
+//   password : String,
+//   googleId : String
+// })
 
 const userSchema = new mongoose.Schema({
   password: String,
@@ -86,7 +86,8 @@ const userSchema = new mongoose.Schema({
   package: Number,
   type: String,
   startDate: Date,
-  endingDate : Date
+  endingDate : Date,
+  
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -365,12 +366,8 @@ app.get("/about",(req,res) =>{
   res.render("about_us");
   });
 
-let port = process.env.PORT;
 
-if (port == null || port == "") {
-  port = 3000;
- 
-}
+
 app.post("/search",(req,res)=>{
   const val = _.capitalize(req.body.searchName);
   User.find({fname :val},(err,users)=>
@@ -381,7 +378,10 @@ app.post("/search",(req,res)=>{
   }).sort({endingDate : 'asc'});
 });
 
-
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 app.listen(port, () => {
   console.log("server is running on port 3000");
