@@ -55,12 +55,7 @@ mongoose.connect("mongodb+srv://Admin-shary:projectgym@cluster0.gul6g.mongodb.ne
 });
 mongoose.set("useCreateIndex", true);
 
-//schema
-// const adminSchema = new mongoose.Schema({
-//   username : String,
-//   password : String,
-//   googleId : String
-// })
+
 
 const userSchema = new mongoose.Schema({
   password: String,
@@ -94,7 +89,7 @@ userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
 const User = mongoose.model("User", userSchema);
-const Admin = mongoose.model("Admin",adminSchema)
+
 
 passport.use(User.createStrategy());
 passport.serializeUser(function(user, done) {
