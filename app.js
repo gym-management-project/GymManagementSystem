@@ -180,7 +180,6 @@ app.get("/logout", (req, res) => {
 })
 app.get("/subscriptions", (req, res) => {
   if (req.isAuthenticated()) {
-    User
     User.find(  {
       "fname": {
         $ne: null
