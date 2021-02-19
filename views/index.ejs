@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Make your work easy with our Gym management system">
+  <meta name="keywords" content="GYM,MANAGEMENT SYSTEM">
+  <meta name="author" content="Shray">
   <link rel="icon" href="/images/barbell.png">
   <title>Gym Manager</title>
   <link rel="stylesheet" type="text/css" href="/css/index.css">
@@ -25,15 +28,15 @@
                 <div class="navlinks">
                     <ul>
                         <li  class="nl">
-                            <a href="/">Home</a>
+                            <span class="home">Home</span>
                         </li>
                         <li class="nl">
-                            <a href="/about">About</a>
+                            <span class="about">Team</span>
                         </li>
                         <li  class="nl">
-                            <a href="/contact_us">Contact</a>
+                            <span class="contact">Contact us</span>
                         </li>
-                        <li class="nl"><a href="#" class="contribute" ><i class="fab fa-github"></i></a></li>
+                        <li class="nl contribute-1"><a href="#" class="contribute" >github</a></li>
                     </ul>
                </div>
                 
@@ -42,54 +45,97 @@
       </header>
 
  <!-- content      -->
-<div class="content">
-    <div class="row">
-          <div class="col-lf">
-              
-            <h1 class="heading">Make your work easy with our Gym manager</h1>
-            <div class="sign">
-            <a class="div-sign-in"href="/login"><div class="sign-in">
-                  <div class="white-line-1"></div>
-                  <div class="white-line-2"></div>
-                  <div class="white-line-3"></div>
-                  <p class="login-t">LOGIN</p>
-              </div></a>
+ <div class="else">
+    <div class="content homePage">
+        <div class="row">
+              <div class="col-lf">
+                  
+                <h1 class="heading">Make your work easy with our Gym manager</h1>
+                <div class="sign">
+                <a class="div-sign-in"href="/login"><div class="sign-in">
+                      <div class="white-line-1"></div>
+                      <div class="white-line-2"></div>
+                      <div class="white-line-3"></div>
+                      <p class="login-t">LOGIN</p>
+                  </div></a>
+                </div>
+            </div>
+              <div class="col-rg"><img  class="index-img"src="/images/index1.png" alt=""></div>
+              </div>
+    </div>
+    <div class="content aboutPage">
+        <div class="row">
+            <div class="card">
+                <div class="img">
+                    <div class="img-cont">
+                        <img src="/images/shray1.jpg" alt="shray" class="profile">
+                        <div class="name-div"><p class="name">Shray Anand</p></div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="inner-detail">
+                        <div class="brief">
+                            <p class="brief-p">
+                                Shray is pursuing its bachelor's degree
+                            from <a class="link" href="https://jcboseust.ac.in/">J.C.Bose UST,YMCA, Faridabad</a>.He is a full stack developer
+                            and also a geek of data analysis  
+                            </p>
+                        </div>
+                        <div class="socials">
+                            <a href=""><i style="color: white;" class="fab fa-github"></i></a>
+                            <a href=""><i style="color: #0e65c2;" class="fab fa-linkedin"></i></a>
+                            <a href=""><i style="color: #f2ca03" class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <div class="img-cont">
+                        <img src="/images/sonu.JPG" alt="sonu" class="profile">
+                        <div class="name-div"><p class="name">Sonu Bhadana</p></div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="inner-detail">
+                        <div class="brief">
+                            <p class="brief-p">
+                                Shray is pursuing its bachelor's degree
+                            from <a class="link" href="https://jcboseust.ac.in/">J.C.Bose UST,YMCA, Faridabad</a>.He is a full stack developer
+                            and also a geek of data analysis  
+                            </p>
+                            
+                        </div>
+                        <div class="socials">
+                            <a href=""><i style="color: white;" class="fab fa-github"></i></a>
+                            <a href=""><i style="color: #0e65c2" class="fab fa-linkedin"></i></a>
+                            <a href=""><i style="color: #f2ca03" class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-          <div class="col-rg"><img  class="index-img"src="/images/index1.png" alt=""></div>
-</div>
-</div>
-<div class="vertical">
-<div class="vertical-bar">
-    <div class="circle home-circle"></div>
-    <div class="circle about-circle"></div>
-    <div class="circle contact-circle"></div>
-</div>
-</div>
-<div class="footer">
-    <p class="copyright">
-       All rights reserved &#169;
-        <span class="current-year"></span>
-      </p>
-</div>
-<script>
-    var date = new Date();
-    document.querySelector(".current-year").innerHTML=date.getFullYear();
-    const hamburger = document.querySelector(".hamburger");
-    const navlinks = document.querySelector(".navlinks ul");
-    const links = document.querySelectorAll(".navlinks  ul li");
-    const contribute = document.querySelector(".contribute");
+        
+    </div>
+    <div class="content contactPage">
+    
+    </div>
+    <div class="vertical">
+    <div class="vertical-bar">
+        <div class="circle home-circle"></div>
+        <div class="circle about-circle"></div>
+        <div class="circle contact-circle"></div>
+    </div>
+    </div>
+    <div class="footer">
+        <p class="copyright">
+           All rights reserved &#169;
+            <span class="current-year"></span>
+          </p>
+    </div>
+    
+ </div>
 
-    hamburger.addEventListener("click",()=>{
-    document.querySelector("header").style.transition ="all 3s";
-    document.querySelector(".navlinks").classList.toggle("navlinks-add");
-    navlinks.classList.toggle("open");
-    links.forEach(link =>{
-        link.classList.toggle("fade");
-    });
-   
-});
-</script>
-
+<script src="/scripts/index.js"></script>
  </body>
 </html>

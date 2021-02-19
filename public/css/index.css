@@ -62,7 +62,7 @@ nav ul li{
     margin-bottom: auto;
     margin-right: 20px;
 }
-nav ul li a{
+nav ul li span,nav ul li a{
     z-index: 100;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
@@ -72,6 +72,9 @@ nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
 
+}
+nav ul li span:hover{
+        cursor:pointer;
 }
 .fa-github{
     font-size: 1.8rem;
@@ -91,9 +94,85 @@ nav ul li a:hover{
   margin-top:auto ;
   margin-bottom: auto;
 }
+.else{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
 .content{
+    flex-grow:1;
     margin-top: 50px;
     margin-bottom: 100px;
+}
+.aboutPage{
+    display:none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.card{
+    background: #382b47;
+    box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
+    margin: auto;
+    height:500px;
+    width:350px
+}
+.img{
+    margin-top: 30px;
+    display: flex;
+}
+.img-cont{
+    margin: auto;
+}
+.profile{
+    border-radius: 100%;
+}
+.name-div{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    height: 25px;
+    border-left:2px solid orange;
+    border-radius: 2px;
+}
+.name{
+    color: white;
+    margin: auto;
+}
+.details{
+    margin-top: 50px;
+    margin: 20px;
+    color: white;
+}
+.link{
+    text-decoration: none;
+    color: lightskyblue;
+}
+.inner-detail{
+    width: 95%;
+    margin:  auto;
+}
+
+.brief{
+  border-left: 2px solid greenyellow;
+  border-radius: 2px;
+display: flex;
+}
+.brief-p{
+    margin: auto;
+    margin-left: 20px;
+    display: inline-block;
+}
+.socials{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.socials a i{
+    font-size: 2rem;
+}
+.contactPage{
+    display: none;
 }
 .row{
     width: 85%;
@@ -190,6 +269,15 @@ nav ul li a:hover{
     border-radius: 100%;
     margin: auto;
 }
+
+
+.profile{
+    width:130px;
+    height:130px;
+}
+.circle:hover {
+  cursor: pointer;
+}
 .copyright{
     text-align: center;
     margin-top: 10px;
@@ -209,6 +297,7 @@ header.header-class{
     }
 }
 @media (max-width : 850px){
+    
     .navBar{
         height: 50px;
         position: relative;
@@ -255,7 +344,7 @@ header.header-class{
         margin-top: 60px;
         flex-direction: column;
         justify-content:space-between;
-        background: -webkit-linear-gradient(top,  #160836  ,#382b47 90%) ;
+        background: black;
         height: 135px;
         width: 100%;
         padding: 0;
@@ -284,12 +373,10 @@ header.header-class{
         text-align: center;
     }
     .navlinks ul li a {
-        color : #f0a35d;
         margin: auto;
         margin-right: auto;
- 
     }
-    
+
     .navlinks ul li {
         opacity: 0;
     }
@@ -336,6 +423,12 @@ header.header-class{
          display: flex;
             margin-bottom: 20px;
      }
+     .aboutPage{
+         display: none;
+     }
+     .contactPage{
+         display: none;
+     }
      .col-lf{
          display:block;
          width: 100%;
@@ -358,6 +451,19 @@ header.header-class{
     }
 }
 @media(max-width:400px){
+
+    .card{
+        height:400px;
+        width:250px
+    }
+    .profile{
+        margin-top: 30px;
+        width:100px;
+        height: 100px;
+    }
+    .socials{
+        margin-top: 20px;
+    }
     .heading {
         font-size: 3rem;
         text-align: center;

@@ -49,7 +49,7 @@ passport.use(new GoogleStrategy({
 
 //conection to database
 
-mongoose.connect("mongodb+srv://Admin-shary:projectgym@cluster0.gul6g.mongodb.net/subscriberDB", {
+mongoose.connect("mongodb+srv://Admin-shary:"+process.env.DB+"@cluster0.gul6g.mongodb.net/subscriberDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
