@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -174,6 +175,97 @@ display: flex;
 .contactPage{
     display: none;
 }
+.contact-heading{
+    color: white;
+    font-size: 2.5rem;
+}
+.contact-paragraph,.contact-paragraph2{
+    color:white;
+    font-weight: 300;
+}
+.contact-paragraph{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.contact-paragraph2{
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+}
+.contact-paragraph2>span{
+    color : lightskyblue;
+}
+.contact-form-div{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+}
+.contact-form{
+    width: 70%;
+}
+.rowF{
+    display: flex;
+}
+.rowF > input{
+    width: 45%;
+}
+.rowF > input:nth-child(2){
+    margin-left: auto;
+} 
+.long{
+    width: 100%;
+}
+input{
+    height:50px;
+}
+textarea{
+    height: 200px;
+}
+input,textarea{
+    margin: 1rem 0  1rem 0;
+    background: none;
+    border:2px solid #4f4362;
+    border-radius: 5px; 
+    font-size: 1rem;
+    color:white;
+    padding-left: 10px;
+}
+input::placeholder,textarea::placeholder{
+    color:#4f4362;
+    font-family: "Ubuntu" ,sans-serif;
+    font-size: 1rem;
+    padding-left: 10px;
+
+}
+input:focus,textarea:focus,button:focus{
+    outline: none;
+}
+textarea::placeholder{
+    padding-top:10px ;
+}
+.send-email{
+    width: 150px;
+    height: 40px;
+    color: #5a68d8;
+    transition: 0.2s ease-in;
+    border:2px solid #5a68d8;
+    border-radius: 5px;
+    background: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: auto;
+}
+.send-btn{
+    width: 100%;
+    display: flex;
+}
+.send-email:hover{
+    background: #5a68d8;
+    color: white;
+}
+.rowC{
+    width: 85%;
+    margin: auto;
+}
 .row{
     width: 85%;
     margin: auto;
@@ -294,6 +386,13 @@ header.header-class{
 @media(max-width : 1000px){
     .heading{
         font-size: 4rem;
+    }
+    .contact-form-div{
+        flex-direction: column;
+    }
+    .contact-form{
+        margin-bottom: 2rem;
+        width: 90%;
     }
 }
 @media (max-width : 850px){
@@ -449,6 +548,12 @@ header.header-class{
         width: 120px;
         height: 40px;
     }
+    .contact-form{
+        width: 100%;
+    }
+    .send-email{
+        width: 100%;
+    }
 }
 @media(max-width:400px){
 
@@ -479,6 +584,21 @@ header.header-class{
     .white-line-3{
         bottom: 5px;
     }
-
-    
+    .contact-heading{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .contact-paragraph,.contact-paragraph2{
+        font-size: 1rem;
+    }
+    .contact-paragraph2{
+        margin-top: 0.5rem;
+    }
+    .rowF{
+        flex-direction: column;
+    }
+    .rowF > input{
+        width: 100%;
+    }
+  
 }
